@@ -3,23 +3,25 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // 1. Create Default Admin User (For Logging into Admin Panel)
+        User::updateOrCreate(
+            ['email' => 'admin@lifextract.org'],
+            [
+                'name' => 'LifeExtract Admin',
+                'password' => bcrypt('password123'),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // 2. Call Our Custom Content Seeder (Programs, Episodes, Impact Stories)
+        $this->call(PlatformContentSeeder::class);
     }
 }
