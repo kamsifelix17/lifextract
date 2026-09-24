@@ -25,8 +25,8 @@ RUN apt-get update && apt-get install -y \
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
+# Enable Apache mod_rewrite and configure ServerName
+RUN a2enmod rewrite && echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Configure Apache DocumentRoot to Laravel public directory
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public

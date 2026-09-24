@@ -20,8 +20,11 @@ fi
 chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
 chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
 
-# Run database migrations
-php artisan migrate --force || true
+# Run database migrations and seeders for demo content
+php artisan migrate --force --seed || php artisan migrate --force || true
+
+# Ensure public storage symlink exists
+php artisan storage:link || true
 
 # Cache Laravel configurations for production
 php artisan config:cache || true
