@@ -4,15 +4,20 @@
             
             <!-- Col 1: Foundation Vision -->
             <div class="lg:col-span-2 space-y-4">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-bold text-lg">
-                        LE
+                <a href="{{ route('home') }}" class="flex items-center gap-3 group inline-flex mb-2">
+                    <!-- Icon Box (Slightly larger for footer) -->
+                    <div class="w-12 h-12 rounded-xl bg-[#111111] border border-[#D4AF37]/40 flex items-center justify-center shadow-lg transition-colors group-hover:border-[#D4AF37]">
+                        <i class="bi bi-lightning-charge-fill text-[#D4AF37] text-xl transition-colors group-hover:text-[#FDE08B]"></i>
                     </div>
-                    <div>
-                        <h3 class="text-white font-bold text-lg leading-tight">LIFEXTRACT</h3>
-                        <p class="text-xs text-emerald-400 font-semibold tracking-wider uppercase">Humanitarian Foundation</p>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold tracking-tight text-white">
+                            Life <span class="text-gold-gradient">Xtract</span>
+                        </span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-[#D4AF37]">
+                            Humanitarian Foundation
+                        </span>
                     </div>
-                </div>
+                </a>
                 <p class="text-sm text-slate-400 leading-relaxed pr-4">
                     Putting people before publicity. Empowering vulnerable elderly women, equipping youth with digital skills, providing free medical outreaches, and transforming grassroots communities in Lagos, Nigeria.
                 </p>
