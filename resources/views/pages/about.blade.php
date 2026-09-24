@@ -4,14 +4,15 @@
     <!-- 1. Header Banner -->
     <section class="bg-gradient-to-b from-slate-950 to-emerald-950 text-white py-16 lg:py-24 text-center relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-900/60 border border-emerald-500/30 px-4 py-1.5 rounded-full">
+            <!-- Added 'inline-block' and reduced the margin to 'mb-4' -->
+            <span class="inline-block text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-900/60 border border-emerald-500/30 px-4 py-1.5 rounded-full mb-4">
                 Who We Are & What We Stand For
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold font-serif-heading tracking-tight">
-                Authenticity • Compassion • Impact
+            Authenticity • Compassion • Impact
             </h1>
             <p class="text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Dedicated to empowering vulnerable people, restoring human dignity, and sparking meaningful life conversations across Lagos, Nigeria and beyond.
+            Dedicated to empowering vulnerable people, restoring human dignity, and sparking meaningful life conversations across Lagos, Nigeria and beyond.
             </p>
         </div>
     </section>

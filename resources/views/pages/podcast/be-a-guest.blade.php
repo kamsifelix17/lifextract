@@ -3,7 +3,7 @@
 
     <section class="bg-gradient-to-b from-slate-950 via-purple-950 to-slate-950 text-white py-16 text-center">
         <div class="max-w-3xl mx-auto px-4 space-y-4">
-            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400 bg-amber-500/20 border border-amber-500/40 px-3.5 py-1.5 rounded-full">
+            <span class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-amber-400 bg-amber-500/20 border border-amber-500/40 px-3.5 py-1.5 rounded-full mb-4">
                 “TALK AM AS E BE!”
             </span>
             <h1 class="text-3xl sm:text-4xl font-extrabold font-serif-heading">

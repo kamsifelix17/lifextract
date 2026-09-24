@@ -4,7 +4,7 @@
     <!-- Header Banner -->
     <section class="bg-gradient-to-b from-slate-950 to-emerald-950 text-white py-16 text-center">
         <div class="max-w-4xl mx-auto px-4 space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-900/60 border border-emerald-500/30 px-4 py-1.5 rounded-full">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-900/60 border border-emerald-500/30 px-4 py-1.5 rounded-full mb-4">
                 Humanitarian Outreaches
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold font-serif-heading">
