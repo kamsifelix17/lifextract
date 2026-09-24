@@ -34,11 +34,11 @@
                     <!-- Hero Action Buttons -->
                     <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                         <a href="{{ route('donate') }}" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold text-sm shadow-xl hover:shadow-emerald-900/50 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                            <span>❤️</span>
+                            <i class="bi bi-heart-fill text-base"></i>
                             <span>Support an Outreach</span>
                         </a>
                         <a href="{{ route('podcast.index') }}" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 text-amber-400 hover:text-amber-300 font-bold text-sm border border-amber-500/30 hover:border-amber-400/60 backdrop-blur-md transition flex items-center justify-center gap-2">
-                            <span>🎙️</span>
+                            <i class="bi bi-mic-fill text-base"></i>
                             <span>Explore Podcast & Stories</span>
                         </a>
                     </div>
@@ -63,13 +63,13 @@
                                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-emerald-400">Our Two Pillars</span>
                                 <h3 class="text-lg font-bold text-white">One Unified Mission</h3>
                             </div>
-                            <span class="text-2xl">🌍</span>
+                            <i class="bi bi-globe-europe-africa text-2xl"></i>
                         </div>
 
                         <!-- Pillar 1: LifeExtract Foundation -->
                         <div class="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 space-y-2 hover:bg-emerald-950/60 transition">
                             <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
-                                <span>🤝</span>
+                                <i class="bi bi-people-fill"></i>
                                 <h4>LifeExtract Foundation</h4>
                             </div>
                             <p class="text-xs text-slate-300 leading-relaxed">
@@ -83,7 +83,7 @@
                         <!-- Pillar 2: TalksWithMrDee -->
                         <div class="p-4 rounded-2xl bg-purple-950/40 border border-purple-500/30 space-y-2 hover:bg-purple-950/60 transition">
                             <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-                                <span>🎙️</span>
+                                <i class="bi bi-mic-fill text-base"></i>
                                 <h4>TALKSWITHMRDEE</h4>
                             </div>
                             <p class="text-xs text-slate-300 leading-relaxed">
@@ -223,7 +223,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center max-w-2xl mx-auto space-y-3">
-                <span class="text-xs font-bold uppercase tracking-widest text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200 mb-4">
                     Confidential Assistance
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-heading">
@@ -240,7 +240,7 @@
                 <!-- Pathway 1: Intentional Partner Connection -->
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-300 hover:shadow-lg transition space-y-4 flex flex-col">
                     <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold">
-                        ❤️
+                        <i class="bi bi-heart-fill text-base"></i>
                     </div>
                     <h3 class="text-base font-bold text-slate-900">Looking for a Meaningful Partner</h3>
                     <p class="text-xs text-slate-600 leading-relaxed flex-grow">
@@ -254,7 +254,7 @@
                 <!-- Pathway 2: Marriage & Relationship Conflict -->
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-purple-300 hover:shadow-lg transition space-y-4 flex flex-col">
                     <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl font-bold">
-                        🤝
+                        <i class="bi bi-people-fill"></i>
                     </div>
                     <h3 class="text-base font-bold text-slate-900">Marriage & Conflict Resolution</h3>
                     <p class="text-xs text-slate-600 leading-relaxed flex-grow">
@@ -268,7 +268,7 @@
                 <!-- Pathway 3: Leaving Unhealthy/Toxic Relationships -->
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-rose-300 hover:shadow-lg transition space-y-4 flex flex-col">
                     <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-2xl font-bold">
-                        🕊️
+                        <i class="bi bi-shield-fill-exclamation"></i>
                     </div>
                     <h3 class="text-base font-bold text-slate-900">Exiting Unhealthy Relationships</h3>
                     <p class="text-xs text-slate-600 leading-relaxed flex-grow">
@@ -282,7 +282,7 @@
                 <!-- Pathway 4: Legal Separation / Divorce Guidance -->
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-300 hover:shadow-lg transition space-y-4 flex flex-col">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl font-bold">
-                        ⚖️
+                        <i class="bi bi-file-earmark-text-fill"></i>
                     </div>
                     <h3 class="text-base font-bold text-slate-900">Peaceful Legal Separation</h3>
                     <p class="text-xs text-slate-600 leading-relaxed flex-grow">

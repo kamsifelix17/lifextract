@@ -80,9 +80,11 @@
 
                         <div class="pt-2 space-y-3">
                             <a href="{{ route('donate') }}" class="block w-full text-center py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition">
-                                ❤️ Donate to this Outreach
+                                <i class="bi bi-heart-fill mr-2"></i> 
+                                Donate to this Outreach
                             </a>
                             <a href="{{ route('volunteer.create') }}" class="block w-full text-center py-3 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 font-semibold text-xs transition">
+                                <i class="bi bi-hand-index-fill mr-2"></i> 
                                 Volunteer for this Outreach
                             </a>
                         </div>

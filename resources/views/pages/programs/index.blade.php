@@ -38,7 +38,7 @@
                     <x-program-card :program="$program" />
                 @empty
                     <div class="col-span-3 text-center py-16 bg-white rounded-3xl border border-slate-200 space-y-3">
-                        <span class="text-4xl">🕊️</span>
+                        <i class="bi bi-exclamation-circle text-4xl text-slate-400"></i>
                         <h3 class="text-base font-bold text-slate-800">No programs in this category yet</h3>
                         <p class="text-xs text-slate-500">Check back soon or explore other categories above.</p>
                     </div>

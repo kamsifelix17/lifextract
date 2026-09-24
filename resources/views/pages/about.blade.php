@@ -25,7 +25,7 @@
                 <!-- Card 1: Our Mission -->
                 <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 shadow-sm space-y-4 hover:border-emerald-300 transition">
                     <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold">
-                        🎯
+                        <i class="bi bi-flag-fill"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 font-serif-heading">Our Mission</h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -36,7 +36,7 @@
                 <!-- Card 2: Our Vision -->
                 <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 shadow-sm space-y-4 hover:border-emerald-300 transition">
                     <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-2xl font-bold">
-                        👁️
+                        <i class="bi bi-eye-fill"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 font-serif-heading">Our Vision</h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -47,7 +47,7 @@
                 <!-- Card 3: Our Philosophy -->
                 <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 shadow-sm space-y-4 hover:border-amber-300 transition">
                     <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl font-bold">
-                        💡
+                        <i class="bi bi-lightbulb-fill"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 font-serif-heading">Our Core Philosophy</h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -76,25 +76,25 @@
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <span class="text-3xl">❤️</span>
+                    <i class="bi bi-heart-fill text-3xl"></i>
                     <h4 class="font-bold text-slate-900 text-sm">Compassion</h4>
                     <p class="text-xs text-slate-500">Listening to pain and meeting people at their point of need.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <span class="text-3xl">🛡️</span>
+                    <i class="bi bi-shield-fill text-3xl"></i>
                     <h4 class="font-bold text-slate-900 text-sm">Professionalism</h4>
                     <p class="text-xs text-slate-500">Certified healthcare, licensed therapists, and legal counsel.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <span class="text-3xl">🔍</span>
+                    <i class="bi bi-file-earmark-text-fill text-3xl"></i>
                     <h4 class="font-bold text-slate-900 text-sm">Transparency</h4>
                     <p class="text-xs text-slate-500">Full financial accountability for every donor and partner.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <span class="text-3xl">🤝</span>
+                    <i class="bi bi-people-fill text-3xl"></i>
                     <h4 class="font-bold text-slate-900 text-sm">Human Connection</h4>
                     <p class="text-xs text-slate-500">Bridging the gap between resource donors and grassroots heroes.</p>
                 </div>
@@ -122,7 +122,7 @@
                 </p>
                 <div class="pt-2">
                     <a href="{{ route('podcast.index') }}" class="inline-flex items-center gap-2 text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 px-6 py-3 rounded-xl transition">
-                        <span>🎙️</span>
+                        <i class="bi bi-mic-fill"></i>
                         <span>Listen to the Podcast</span>
                     </a>
                 </div>
@@ -132,14 +132,14 @@
                 <h3 class="text-lg font-bold text-white border-b border-purple-800/50 pb-3">The Ecosystem at a Glance</h3>
                 <div class="space-y-4 text-xs text-slate-300">
                     <div class="flex items-start gap-3">
-                        <span class="text-emerald-400 text-base">🟢</span>
+                        <i class="bi bi-people-fill text-amber-400 text-base"></i>
                         <div>
                             <strong class="text-white text-sm">LIFEXTRACT FOUNDATION:</strong>
                             <p class="text-slate-400">The humanitarian hand providing food, grants, scholarships, and free medical checks.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <span class="text-amber-400 text-base">🟣</span>
+                        <i class="bi bi-mic-fill text-amber-400 text-base"></i>
                         <div>
                             <strong class="text-white text-sm">TALKSWITHMRDEE:</strong>
                             <p class="text-slate-400">The storytelling voice giving people safe space, intentional matching, and therapy access.</p>

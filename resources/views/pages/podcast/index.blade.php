@@ -5,7 +5,7 @@
     <section class="bg-gradient-to-b from-slate-950 via-purple-950 to-slate-950 text-white py-16 lg:py-20 text-center relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 space-y-4 relative z-10">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-xs font-mono font-bold text-amber-400">
-                <span>🎙️</span>
+                <i class="bi bi-mic-fill"></i>
                 <span>“TALK AM AS E BE!”</span>
             </div>
             <h1 class="text-4xl sm:text-5xl font-extrabold font-serif-heading">
@@ -18,7 +18,7 @@
             <!-- Pitch to be a guest button -->
             <div class="pt-2">
                 <a href="{{ route('podcast.be-a-guest') }}" class="inline-flex items-center gap-2 text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 px-6 py-3 rounded-xl transition shadow-lg">
-                    <span>✨</span>
+                    <i class="bi bi-star-fill [yellow-400]"></i>
                     <span>Apply to Be a Guest / Share Your Story</span>
                 </a>
             </div>
@@ -45,7 +45,7 @@
                     <x-episode-card :episode="$episode" />
                 @empty
                     <div class="col-span-3 text-center py-16 bg-slate-800/60 rounded-3xl border border-slate-700 space-y-3">
-                        <span class="text-4xl">🎙️</span>
+                        <i class="bi bi-exclamation-circle text-4xl text-amber-400"></i>
                         <h3 class="text-base font-bold text-white">No podcast episodes found</h3>
                         <p class="text-xs text-slate-400">Try another search term or check back soon!</p>
                     </div>

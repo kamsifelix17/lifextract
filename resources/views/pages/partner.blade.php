@@ -3,7 +3,7 @@
 
     <section class="bg-gradient-to-b from-slate-950 to-teal-950 text-white py-16 text-center">
         <div class="max-w-3xl mx-auto px-4 space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-teal-400 bg-teal-900/60 border border-teal-500/30 px-3.5 py-1.5 rounded-full">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest text-teal-400 bg-teal-900/60 border border-teal-500/30 px-3.5 py-1.5 rounded-full mb-6">
                 Strategic Collaboration
             </span>
             <h1 class="text-3xl sm:text-4xl font-extrabold font-serif-heading">

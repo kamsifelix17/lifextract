@@ -3,7 +3,7 @@
 
     <section class="bg-gradient-to-b from-slate-950 to-emerald-950 text-white py-16 text-center">
         <div class="max-w-3xl mx-auto px-4 space-y-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-900/60 border border-emerald-500/30 px-3.5 py-1.5 rounded-full">
+            <span class="inline-block text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-900/60 border border-emerald-500/30 px-3.5 py-1.5 rounded-full mb-6">
                 Get In Touch
             </span>
             <h1 class="text-3xl sm:text-4xl font-extrabold font-serif-heading">
@@ -24,29 +24,33 @@
                     <h3 class="text-lg font-bold text-slate-900 font-serif-heading">Our Contact Info</h3>
                     
                     <div class="space-y-4 text-xs text-slate-600">
-                        <div class="flex items-start gap-3">
-                            <span class="text-lg">📍</span>
+                        <!-- Location (Links to Google Maps) -->
+                        <a href="https://maps.google.com/?q=Lagos+State,+Nigeria" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 group hover:opacity-80 transition-opacity">
+                                <i class="bi bi-geo-alt-fill text-[#ff0000] text-base transition-transform group-hover:scale-110"></i>
                             <div>
                                 <strong class="text-slate-900 block">Location:</strong>
                                 <span>Lagos State, Nigeria</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="flex items-start gap-3">
-                            <span class="text-lg">✉️</span>
+                        <!-- Email (Opens Default Mail Client) -->
+                        <a href="mailto:info@lifextract.org" class="flex items-start gap-3 group hover:opacity-80 transition-opacity">
+                                <i class="bi bi-envelope-fill text-[#000000] text-base transition-transform group-hover:scale-110"></i>
                             <div>
                                 <strong class="text-slate-900 block">Email:</strong>
                                 <span>info@lifextract.org</span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="flex items-start gap-3">
-                            <span class="text-lg">💬</span>
+                        <!-- WhatsApp (Opens WhatsApp Chat directly) -->
+                        <a href="https://wa.me/2348000000000" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 group hover:opacity-80 transition-opacity">
+                        <!-- Forced official WhatsApp green -->
+                                <i class="bi bi-whatsapp text-[#25D366] text-base transition-transform group-hover:scale-110"></i>
                             <div>
                                 <strong class="text-slate-900 block">WhatsApp:</strong>
                                 <span>+234 800 000 0000</span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

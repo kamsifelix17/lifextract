@@ -14,7 +14,9 @@
             </a>
         </div>
         <div class="hidden md:flex items-center gap-4 text-slate-400">
-            <span>📍 Lagos, Nigeria</span>
+            <span>
+            <i class="bi bi-geo-alt-fill text-rose-600 text-base"></i> 
+            Lagos, Nigeria</span>
             <span>•</span>
             <a href="mailto:info@lifextract.org" class="hover:text-white transition">info@lifextract.org</a>
         </div>
@@ -24,14 +26,21 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
             
-            <!-- Brand Logo & Name -->
+            <!-- Navbar Brand Logo -->
             <a href="{{ route('home') }}" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-800 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-                    LE
+                <!-- Icon Box -->
+                <div class="w-10 h-10 rounded-xl bg-brand-charcoal border border-[#D4AF37]/50 flex items-center justify-center shadow-md transition-colors group-hover:border-[#D4AF37]">
+                    <!-- Lightning bolt matching the official logo -->
+                    <i class="bi bi-lightning-charge-fill text-[#D4AF37] text-lg transition-colors group-hover:text-[#FDE08B]"></i>
                 </div>
+                <!-- Text -->
                 <div class="flex flex-col">
-                    <span class="font-bold text-lg leading-tight text-slate-900 tracking-tight">LIFEXTRACT</span>
-                    <span class="text-[10px] tracking-widest text-emerald-700 font-bold uppercase">Humanitarian Foundation</span>
+                    <span class="text-xl font-extrabold tracking-tight text-slate-900">
+                        Life <span class="text-gold-gradient">Xtract</span>
+                    </span>
+                    <span class="text-[9px] font-bold tracking-widest uppercase text-[#D4AF37]">
+                        Humanitarian Foundation
+                    </span>
                 </div>
             </a>
 
@@ -43,9 +52,12 @@
                 <a href="{{ route('impact') }}" class="hover:text-emerald-600 transition {{ request()->routeIs('impact') ? 'text-emerald-600 font-bold' : '' }}">Our Impact</a>
                 
                 <!-- Podcast Hub Link with Badge -->
-                <a href="{{ route('podcast.index') }}" class="flex items-center gap-1.5 text-purple-700 hover:text-purple-900 transition font-bold px-3 py-1 rounded-full bg-purple-50 border border-purple-200">
-                    <span>🎙️ Podcast</span>
-                    <span class="text-[10px] bg-purple-600 text-white px-1.5 py-0.5 rounded-full uppercase">MrDee</span>
+                <a href="{{ route('podcast.index') }}" class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#1A1A1A] border border-[#D4AF37]/50 hover:border-[#D4AF37] transition-colors shadow-sm group">
+                    <i class="bi bi-mic-fill text-[#D4AF37] text-lg"></i>
+                    <span class="text-sm font-bold text-white tracking-wide">Podcast</span>
+                    <span class="text-[10px] font-extrabold bg-[#D4AF37] text-[#111111] px-2 py-0.5 rounded-sm uppercase tracking-wider">
+                        MRDEE
+                </span>
                 </a>
 
                 <!-- Support Pathways Link -->
@@ -60,7 +72,7 @@
                     Volunteer
                 </a>
                 <a href="{{ route('donate') }}" class="text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-1.5">
-                    <span>❤️</span>
+                    <i class="bi bi-heart-fill text-rose-600 text-base"></i>
                     <span>Donate</span>
                 </a>
             </div>

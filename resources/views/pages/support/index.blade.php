@@ -43,7 +43,10 @@
                             <label class="flex items-start gap-3 p-4 rounded-2xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/50 cursor-pointer transition">
                                 <input type="radio" name="type" value="dating_support" checked class="mt-1 text-emerald-600 focus:ring-emerald-500">
                                 <div>
-                                    <strong class="text-xs font-bold text-slate-900 block">❤️ Intentional Matchmaking</strong>
+                                    <strong class="text-xs font-bold text-slate-900 block">
+                                        <i class="bi bi-heart-fill text-[#008000] text-base"></i>
+                                        Intentional Matchmaking
+                                    </strong>
                                     <span class="text-[11px] text-slate-500">Looking for a purpose-driven life partner.</span>
                                 </div>
                             </label>
@@ -51,7 +54,10 @@
                             <label class="flex items-start gap-3 p-4 rounded-2xl border border-slate-200 hover:border-purple-500 hover:bg-purple-50/50 cursor-pointer transition">
                                 <input type="radio" name="type" value="therapy_support" class="mt-1 text-purple-600 focus:ring-purple-500">
                                 <div>
-                                    <strong class="text-xs font-bold text-slate-900 block">🤝 Marriage & Conflict Counseling</strong>
+                                    <strong class="text-xs font-bold text-slate-900 block">
+                                        <i class="bi bi-people-fill text-[#800080] text-base"></i> 
+                                        Marriage & Conflict Counseling
+                                    </strong>
                                     <span class="text-[11px] text-slate-500">Resolving communication or trust issues.</span>
                                 </div>
                             </label>
@@ -59,7 +65,10 @@
                             <label class="flex items-start gap-3 p-4 rounded-2xl border border-slate-200 hover:border-rose-500 hover:bg-rose-50/50 cursor-pointer transition">
                                 <input type="radio" name="type" value="crisis_support" class="mt-1 text-rose-600 focus:ring-rose-500">
                                 <div>
-                                    <strong class="text-xs font-bold text-slate-900 block">🕊️ Exiting an Unhealthy Relationship</strong>
+                                    <strong class="text-xs font-bold text-slate-900 block">
+                                        <i class="bi bi-arrow-bar-left text-[#ff0000] text-base"></i> 
+                                        Exiting an Unhealthy Relationship
+                                    </strong>
                                     <span class="text-[11px] text-slate-500">Guidance for safe, responsible next steps.</span>
                                 </div>
                             </label>
@@ -67,7 +76,10 @@
                             <label class="flex items-start gap-3 p-4 rounded-2xl border border-slate-200 hover:border-blue-500 hover:bg-blue-50/50 cursor-pointer transition">
                                 <input type="radio" name="type" value="legal_support" class="mt-1 text-blue-600 focus:ring-blue-500">
                                 <div>
-                                    <strong class="text-xs font-bold text-slate-900 block">⚖️ Peaceful Legal Separation / Divorce</strong>
+                                    <strong class="text-xs font-bold text-slate-900 block">
+                                        <i class="bi bi-file-earmark-text-fill text-[#0000ff] text-base"></i> 
+                                        Peaceful Legal Separation / Divorce
+                                    </strong>
                                     <span class="text-[11px] text-slate-500">Consultation with qualified family lawyers.</span>
                                 </div>
                             </label>
@@ -100,7 +112,7 @@
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50 text-slate-600 text-xs flex items-center gap-2">
-                        <span>🔒</span>
+                        <i class="bi bi-shield-lock-fill text-rose-600 text-base"></i>
                         <span>We respect your privacy. Conversations and requests are never shared publicly without consent.</span>
                     </div>
 

@@ -26,7 +26,7 @@
                 <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-md space-y-6">
                     <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
                         <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold">
-                            🏦
+                            <i class="bi bi-bank2"></i>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-slate-900 font-serif-heading">Direct Bank Transfer</h3>
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="p-4 rounded-xl bg-emerald-50 text-emerald-800 text-xs flex items-center gap-2">
-                        <span>🛡️</span>
+                        <i class="bi bi-shield-lock-fill text-emerald-700 text-base"></i>
                         <span>All donations are strictly audited and deployed directly to verified community beneficiaries.</span>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-md space-y-6">
                     <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
                         <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl font-bold">
-                            🎯
+                            <i class="bi bi-box2-heart-fill text-purple-700 text-2xl"></i>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-slate-900 font-serif-heading">Sponsor an Active Project</h3>

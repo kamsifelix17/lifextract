@@ -31,8 +31,14 @@
 
             <!-- Col 3: TalksWithMrDee -->
             <div class="space-y-3">
-                <h4 class="text-amber-400 font-bold text-sm tracking-wider uppercase">TalksWithMrDee</h4>
-                <ul class="space-y-2 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="bi bi-mic-fill text-[#D4AF37] text-lg"></i>
+                    <h4 class="text-[#D4AF37] font-extrabold text-sm tracking-wider uppercase">TalksWithMrDee</h4>
+                </div>
+                <p class="text-[10px] text-slate-400 font-medium tracking-widest uppercase italic border-l-2 border-[#D4AF37]/50 pl-2">
+                    "Talk am as e be!"
+                </p>
+                <ul class="space-y-2 text-sm pt-2">
                     <li><a href="{{ route('podcast.index') }}" class="hover:text-amber-300 transition">All Episodes</a></li>
                     <li><a href="{{ route('podcast.be-a-guest') }}" class="hover:text-amber-300 transition">Be a Guest</a></li>
                     <li><a href="{{ route('support.index') }}" class="hover:text-amber-300 transition">Support Pathways</a></li>
@@ -63,6 +69,26 @@
                 <a href="{{ route('volunteer.create') }}" class="hover:text-slate-400">Volunteer</a>
                 <a href="{{ route('partner.create') }}" class="hover:text-slate-400">Partner With Us</a>
             </div>
+        </div>
+        
+        <!-- ImpactDev Signature Section -->
+        <div class="pt-6 border-t border-slate-800/50 flex flex-col items-center gap-2">
+            <!-- Signature Divider -->
+            <div class="flex items-center justify-center gap-3">
+                <span class="w-8 h-px bg-slate-800"></span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-500">
+                    Crafted with precision
+                </span>
+                <span class="w-8 h-px bg-slate-800"></span>
+            </div>
+
+            <!-- ImpactDev Signature -->
+            <p class="text-xs text-slate-500 tracking-wide">
+                Website by
+                <a href="https://theimpactdev.com" target="_blank" class="font-serif text-brand-gold hover:text-brand-gold-light tracking-normal ml-1 transition-colors">
+                    ImpactDev
+                </a>
+            </p>
         </div>
     </div>
 </footer>

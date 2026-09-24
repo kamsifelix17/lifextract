@@ -35,7 +35,7 @@
                         <!-- Audio-only Banner -->
                         <div class="h-64 rounded-3xl bg-gradient-to-br from-purple-900 to-slate-900 border border-slate-800 flex items-center justify-center p-6 text-center">
                             <div class="space-y-2">
-                                <span class="text-5xl">🎧</span>
+                                <i class="bi bi-headphones text-4xl text-amber-400"></i>
                                 <h3 class="text-xl font-bold text-white">Audio Podcast Edition</h3>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                         @if($episode->guest_name)
                             <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex items-center gap-4">
                                 <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xl">
-                                    👤
+                                    <i class="bi bi-person-fill text-amber-400"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-white">{{ $episode->guest_name }}</h4>
@@ -85,7 +85,7 @@
                     <!-- Support Card -->
                     <div class="bg-gradient-to-br from-purple-950 to-slate-900 p-6 sm:p-8 rounded-3xl border border-purple-800/40 shadow-xl space-y-4">
                         <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-                            <span>🤝</span>
+                            <i class="bi bi-heart-fill [yellow-400]"></i>
                             <h4>Facing a Similar Challenge?</h4>
                         </div>
                         <p class="text-xs text-slate-300 leading-relaxed">
