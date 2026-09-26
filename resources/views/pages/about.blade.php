@@ -67,36 +67,43 @@
                 <h2 class="text-3xl font-extrabold text-slate-900 font-serif-heading">Our Core Values</h2>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-                
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <span class="text-3xl">🌿</span>
-                    <h4 class="font-bold text-slate-900 text-sm">Authenticity</h4>
-                    <p class="text-xs text-slate-500">Real people, honest motives, genuine community support.</p>
+            <!-- Core Values Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto px-4 mt-12">
+    
+                <!-- Authenticity -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <!-- Replaced with a Bootstrap star/sparkle to represent genuine authenticity -->
+                    <i class="bi bi-stars text-emerald-500 text-4xl mb-4 inline-block"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Authenticity</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Real people, honest motives, genuine community support.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <i class="bi bi-heart-fill text-3xl"></i>
-                    <h4 class="font-bold text-slate-900 text-sm">Compassion</h4>
-                    <p class="text-xs text-slate-500">Listening to pain and meeting people at their point of need.</p>
+                <!-- Compassion -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <i class="bi bi-heart-fill text-rose-500 text-4xl mb-4 inline-block"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Compassion</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Listening to pain and meeting people at their point of need.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <i class="bi bi-shield-fill text-3xl"></i>
-                    <h4 class="font-bold text-slate-900 text-sm">Professionalism</h4>
-                    <p class="text-xs text-slate-500">Certified healthcare, licensed therapists, and legal counsel.</p>
+                <!-- Professionalism -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <i class="bi bi-shield-fill-check text-blue-600 text-4xl mb-4 inline-block"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Professionalism</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Certified healthcare, licensed therapists, and legal counsel.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <i class="bi bi-file-earmark-text-fill text-3xl"></i>
-                    <h4 class="font-bold text-slate-900 text-sm">Transparency</h4>
-                    <p class="text-xs text-slate-500">Full financial accountability for every donor and partner.</p>
+                <!-- Transparency -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <i class="bi bi-file-earmark-text-fill text-[#D4AF37] text-4xl mb-4 inline-block"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Transparency</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Full financial accountability for every donor and partner.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-2">
-                    <i class="bi bi-people-fill text-3xl"></i>
-                    <h4 class="font-bold text-slate-900 text-sm">Human Connection</h4>
-                    <p class="text-xs text-slate-500">Bridging the gap between resource donors and grassroots heroes.</p>
+                <!-- Human Connection -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow">
+                    <i class="bi bi-people-fill text-purple-500 text-4xl mb-4 inline-block"></i>
+                    <h3 class="font-bold text-slate-900 mb-2">Human Connection</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Bridging the gap between resource donors and grassroots heroes.</p>
                 </div>
 
             </div>
@@ -107,7 +114,7 @@
     <section class="py-16 bg-slate-950 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-950/80 border border-amber-500/30 px-3.5 py-1 rounded-full">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-950/80 border border-amber-500/30 px-3.5 py-1 rounded-full mb-2">
                     Media & Community Platform
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-serif-heading text-white">

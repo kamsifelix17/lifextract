@@ -61,8 +61,9 @@
                 </a>
 
                 <!-- Support Pathways Link -->
-                <a href="{{ route('support.index') }}" class="text-rose-600 hover:text-rose-700 transition font-semibold">
-                    Get Support
+                <a href="{{ route('support.index') }}" class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#1A1A1A] border border-[#D4AF37]/50 hover:border-[#D4AF37] transition-colors shadow-sm group">
+                    <i class="bi bi-heart-fill text-[#D4AF37] text-lg"></i>
+                    <span class="text-sm font-bold text-[#D4AF37] tracking-wide">Get Support</span>
                 </a>
             </nav>
 
@@ -79,7 +80,10 @@
 
             <!-- Mobile Menu Toggle Button -->
             <div class="flex lg:hidden items-center gap-2">
-                <a href="{{ route('donate') }}" class="text-xs font-bold text-white bg-emerald-600 px-3 py-2 rounded-lg">Donate</a>
+                <a href="{{ route('donate') }}" class="flex items-center gap-1.5 text-xs font-bold text-white bg-emerald-600 px-3 py-2 rounded-lg transition-colors">
+                <i class="bi bi-heart-fill text-rose-600 text-base"></i>
+                    <span>Donate</span>
+                </a>
                 <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -92,14 +96,31 @@
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-        <a href="{{ route('home') }}" class="block py-2 font-semibold text-slate-800">Home</a>
-        <a href="{{ route('about') }}" class="block py-2 font-semibold text-slate-800">About Us</a>
-        <a href="{{ route('programs.index') }}" class="block py-2 font-semibold text-slate-800">Our Work</a>
-        <a href="{{ route('impact') }}" class="block py-2 font-semibold text-slate-800">Our Impact</a>
-        <a href="{{ route('podcast.index') }}" class="block py-2 font-bold text-purple-700">🎙️ TalksWithMrDee Podcast</a>
-        <a href="{{ route('support.index') }}" class="block py-2 font-bold text-rose-600">🤝 Get Support</a>
-        <a href="{{ route('volunteer.create') }}" class="block py-2 font-semibold text-slate-700">Volunteer</a>
-        <a href="{{ route('partner.create') }}" class="block py-2 font-semibold text-slate-700">Partner With Us</a>
-        <a href="{{ route('contact') }}" class="block py-2 font-semibold text-slate-700">Contact Us</a>
-    </div>
+    
+    <!-- Standard Links -->
+    <a href="{{ route('home') }}" class="block py-2 font-semibold text-slate-800 hover:text-[#D4AF37] transition-colors">Home</a>
+    <a href="{{ route('about') }}" class="block py-2 font-semibold text-slate-800 hover:text-[#D4AF37] transition-colors">About Us</a>
+    <a href="{{ route('programs.index') }}" class="block py-2 font-semibold text-slate-800 hover:text-[#D4AF37] transition-colors">Our Work</a>
+    <a href="{{ route('impact') }}" class="block py-2 font-semibold text-slate-800 hover:text-[#D4AF37] transition-colors">Our Impact</a>
+    
+    <!-- Podcast Hub Link with Badge -->
+    <a href="{{ route('podcast.index') }}" class="flex w-fit items-center gap-3 px-5 py-2.5 my-2 rounded-full bg-[#1A1A1A] border border-[#D4AF37]/50 shadow-sm"> <i class="bi bi-mic-fill text-[#D4AF37] text-lg"></i>
+        <span class="text-sm font-bold text-white tracking-wide">Podcast</span>
+        <span class="text-[10px] font-extrabold bg-[#D4AF37] text-[#111111] px-2 py-0.5 rounded-sm uppercase tracking-wider">
+            MRDEE
+        </span>
+    </a>
+
+    <!-- Get Support Mobile Button -->
+    <a href="{{ route('support.index') }}" class="flex w-fit items-center gap-3 px-5 py-2.5 mb-4 rounded-full bg-[#1A1A1A] border border-[#D4AF37]/50 shadow-sm">
+        <i class="bi bi-heart-fill text-[#D4AF37] text-lg"></i>
+        <span class="text-sm font-bold text-[#D4AF37] tracking-wide">Get Support</span>
+    </a>
+
+    <!-- Secondary Links -->
+    <a href="{{ route('volunteer.create') }}" class="block py-2 font-semibold text-slate-700 hover:text-[#D4AF37] transition-colors">Volunteer</a>
+    <a href="{{ route('partner.create') }}" class="block py-2 font-semibold text-slate-700 hover:text-[#D4AF37] transition-colors">Partner With Us</a>
+    <a href="{{ route('contact') }}" class="block py-2 font-semibold text-slate-700 hover:text-[#D4AF37] transition-colors">Contact Us</a>
+
+</div>
 </header>

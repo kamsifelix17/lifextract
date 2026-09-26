@@ -8,7 +8,7 @@
             <img src="https://img.youtube.com/vi/{{ $episode->youtube_id }}/hqdefault.jpg" alt="{{ $episode->title }}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500">
         @else
             <div class="w-full h-full bg-gradient-to-br from-purple-900 via-indigo-950 to-slate-950 flex items-center justify-center p-4">
-                <span class="text-purple-300 text-4xl">🎙️</span>
+                <i class="fas fa-headphones text-purple-300 text-4xl"></i>
             </div>
         @endif
 
@@ -31,7 +31,7 @@
     <div class="p-5 flex flex-col flex-grow space-y-3">
         @if($episode->guest_name)
             <div class="flex items-center gap-2 text-xs text-amber-400 font-semibold">
-                <span>👤</span>
+                <i class="fas fa-user"></i>
                 <span>Guest: {{ $episode->guest_name }} ({{ $episode->guest_role }})</span>
             </div>
         @endif

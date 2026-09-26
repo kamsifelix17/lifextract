@@ -33,7 +33,7 @@
     <!-- 2. Flash Notification Banner (Success/Error Toasts) -->
     @if(session('success'))
         <div class="bg-emerald-600 text-white text-center py-3 px-4 font-semibold shadow-md flex items-center justify-center gap-2">
-            <span>✅</span>
+            <i class="bi bi-check-circle-fill text-lg"></i>
             <span>{{ session('success') }}</span>
         </div>
     @endif
