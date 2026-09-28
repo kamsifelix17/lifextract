@@ -27,3 +27,6 @@ Homestead.yaml
 Thumbs.db
 ~$*
 discovery_form_extracted.txt
+/.agents
+/AGENTS.md
+/.ai
