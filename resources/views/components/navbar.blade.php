@@ -1,93 +1,57 @@
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
-    <!-- Top Ecosystem Brand Switcher Bar -->
-    <div class="bg-slate-900 text-xs py-1.5 px-4 sm:px-8 text-slate-300 flex justify-between items-center border-b border-slate-800">
-        <div class="flex items-center gap-4">
-            <span class="font-medium text-slate-400">Our Digital Ecosystem:</span>
-            <a href="{{ route('home') }}" class="flex items-center gap-1.5 text-emerald-400 font-semibold hover:text-emerald-300 transition">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                Lifextract Foundation
-            </a>
-            <span class="text-slate-600">|</span>
-            <a href="{{ route('podcast.index') }}" class="flex items-center gap-1.5 text-amber-400 font-semibold hover:text-amber-300 transition">
-                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-                TalksWithMrDee Podcast
-            </a>
-        </div>
-        <div class="hidden md:flex items-center gap-4 text-slate-400">
-            <span>📍 Lagos, Nigeria</span>
-            <span>•</span>
-            <a href="mailto:info@lifextract.org" class="hover:text-white transition">info@lifextract.org</a>
-        </div>
-    </div>
-
-    <!-- Main Navigation Bar -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            
-            <!-- Brand Logo & Name -->
-            <a href="{{ route('home') }}" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-800 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-                    LE
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-bold text-lg leading-tight text-slate-900 tracking-tight">LIFEXTRACT</span>
-                    <span class="text-[10px] tracking-widest text-emerald-700 font-bold uppercase">Humanitarian Foundation</span>
-                </div>
-            </a>
-
-            <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
-                <a href="{{ route('home') }}" class="hover:text-emerald-600 transition {{ request()->routeIs('home') ? 'text-emerald-600 font-bold' : '' }}">Home</a>
-                <a href="{{ route('about') }}" class="hover:text-emerald-600 transition {{ request()->routeIs('about') ? 'text-emerald-600 font-bold' : '' }}">About Us</a>
-                <a href="{{ route('programs.index') }}" class="hover:text-emerald-600 transition {{ request()->routeIs('programs.*') ? 'text-emerald-600 font-bold' : '' }}">Our Work</a>
-                <a href="{{ route('impact') }}" class="hover:text-emerald-600 transition {{ request()->routeIs('impact') ? 'text-emerald-600 font-bold' : '' }}">Our Impact</a>
-                
-                <!-- Podcast Hub Link with Badge -->
-                <a href="{{ route('podcast.index') }}" class="flex items-center gap-1.5 text-purple-700 hover:text-purple-900 transition font-bold px-3 py-1 rounded-full bg-purple-50 border border-purple-200">
-                    <span>🎙️ Podcast</span>
-                    <span class="text-[10px] bg-purple-600 text-white px-1.5 py-0.5 rounded-full uppercase">MrDee</span>
-                </a>
-
-                <!-- Support Pathways Link -->
-                <a href="{{ route('support.index') }}" class="text-rose-600 hover:text-rose-700 transition font-semibold">
-                    Get Support
-                </a>
-            </nav>
-
-            <!-- Action Buttons -->
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="{{ route('volunteer.create') }}" class="text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-emerald-600 px-4 py-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 transition">
-                    Volunteer
-                </a>
-                <a href="{{ route('donate') }}" class="text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-1.5">
-                    <span>❤️</span>
-                    <span>Donate</span>
-                </a>
+<div class="sticky top-0 z-50 w-full bg-[#FBFBFC]/85 backdrop-blur-md pt-3 pb-2 px-4 sm:px-6 lg:px-8 transition-all duration-300">
+    <header class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-full border border-slate-200/80 shadow-md px-5 sm:px-8 py-3 flex items-center justify-between">
+        
+        <!-- Left: Brand Logo -->
+        <a href="{{ route('home') }}" class="flex items-center gap-2.5 group flex-shrink-0">
+            <div class="w-9 h-9 rounded-full bg-[#181A20] flex items-center justify-center text-[#F3C63F] font-black text-sm shadow group-hover:scale-105 transition-transform">
+                LX
             </div>
+            <span class="font-extrabold text-base tracking-tight text-[#181A20] leading-tight">Lifextract</span>
+        </a>
+
+        <!-- Center: Clean Navigation Links with Generous Spacing -->
+        <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold text-slate-600">
+            <a href="{{ route('home') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('home') ? 'text-[#181A20] font-bold' : '' }}">Home</a>
+            <a href="{{ route('about') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('about') ? 'text-[#181A20] font-bold' : '' }}">About Us</a>
+            <a href="{{ route('programs.index') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('programs.*') ? 'text-[#181A20] font-bold' : '' }}">Programs</a>
+            <a href="{{ route('podcast.index') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('podcast.*') ? 'text-[#181A20] font-bold' : '' }}">Podcast</a>
+            <a href="{{ route('impact') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('impact') ? 'text-[#181A20] font-bold' : '' }}">Impact</a>
+            <a href="{{ route('support.index') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('support.*') ? 'text-[#181A20] font-bold' : '' }}">Support</a>
+            <a href="{{ route('contact') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('contact') ? 'text-[#181A20] font-bold' : '' }}">Contact</a>
+        </nav>
+
+        <!-- Right: Action Button & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+            <a href="{{ route('donate') }}" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-[#181A20] hover:bg-black px-5 py-2.5 rounded-full shadow transition-all duration-200 group">
+                <span>Donate Now</span>
+                <span class="w-5 h-5 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center text-[10px] font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                    <i class="bi bi-arrow-up-right"></i>
+                </span>
+            </a>
 
             <!-- Mobile Menu Toggle Button -->
-            <div class="flex lg:hidden items-center gap-2">
-                <a href="{{ route('donate') }}" class="text-xs font-bold text-white bg-emerald-600 px-3 py-2 rounded-lg">Donate</a>
-                <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-
+            <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden p-2 rounded-full text-slate-700 hover:bg-slate-100">
+                <i class="bi bi-list text-2xl"></i>
+            </button>
         </div>
-    </div>
+
+    </header>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-        <a href="{{ route('home') }}" class="block py-2 font-semibold text-slate-800">Home</a>
-        <a href="{{ route('about') }}" class="block py-2 font-semibold text-slate-800">About Us</a>
-        <a href="{{ route('programs.index') }}" class="block py-2 font-semibold text-slate-800">Our Work</a>
-        <a href="{{ route('impact') }}" class="block py-2 font-semibold text-slate-800">Our Impact</a>
-        <a href="{{ route('podcast.index') }}" class="block py-2 font-bold text-purple-700">🎙️ TalksWithMrDee Podcast</a>
-        <a href="{{ route('support.index') }}" class="block py-2 font-bold text-rose-600">🤝 Get Support</a>
-        <a href="{{ route('volunteer.create') }}" class="block py-2 font-semibold text-slate-700">Volunteer</a>
-        <a href="{{ route('partner.create') }}" class="block py-2 font-semibold text-slate-700">Partner With Us</a>
-        <a href="{{ route('contact') }}" class="block py-2 font-semibold text-slate-700">Contact Us</a>
+    <div id="mobile-menu" class="hidden lg:hidden max-w-7xl mx-auto mt-2 bg-white rounded-2xl border border-slate-200 px-5 py-4 space-y-3 shadow-xl">
+        <a href="{{ route('home') }}" class="block py-1.5 font-bold text-slate-900 text-sm">Home</a>
+        <a href="{{ route('about') }}" class="block py-1.5 font-semibold text-slate-600 text-sm">About Us</a>
+        <a href="{{ route('programs.index') }}" class="block py-1.5 font-semibold text-slate-600 text-sm">Programs</a>
+        <a href="{{ route('podcast.index') }}" class="block py-1.5 font-bold text-[#181A20] text-sm"><i class="bi bi-mic mr-1 text-amber-500"></i> TalksWithMrDee Podcast</a>
+        <a href="{{ route('impact') }}" class="block py-1.5 font-semibold text-slate-600 text-sm">Impact</a>
+        <a href="{{ route('support.index') }}" class="block py-1.5 font-semibold text-slate-600 text-sm">Relationship Support & Referrals</a>
+        <a href="{{ route('volunteer.create') }}" class="block py-1.5 font-semibold text-slate-600 text-sm">Volunteer</a>
+        <a href="{{ route('partner.create') }}" class="block py-1.5 font-semibold text-slate-600 text-sm">Partner With Us</a>
+        <a href="{{ route('contact') }}" class="block py-1.5 font-semibold text-slate-600 text-sm">Contact Us</a>
+        <div class="pt-2 border-t border-slate-100">
+            <a href="{{ route('donate') }}" class="block text-center py-2.5 rounded-full bg-[#181A20] text-white font-bold text-xs">
+                Donate Now <i class="bi bi-arrow-up-right ml-1 text-[#F3C63F]"></i>
+            </a>
+        </div>
     </div>
-</header>
+</div>

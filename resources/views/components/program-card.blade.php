@@ -1,76 +1,90 @@
 @props(['program'])
 
 @php
-    // Calculate percentage of donation goal reached
     $target = $program->target_amount ?? 0;
     $raised = $program->raised_amount ?? 0;
     $percentage = $target > 0 ? min(100, round(($raised / $target) * 100)) : 0;
     
-    // Category colors
-    $categoryColors = [
-        'elderly' => 'bg-amber-100 text-amber-800 border-amber-200',
-        'youth' => 'bg-blue-100 text-blue-800 border-blue-200',
-        'health' => 'bg-emerald-100 text-emerald-800 border-emerald-200',
-        'scholarship' => 'bg-purple-100 text-purple-800 border-purple-200',
+    // Category icon mapping using Bootstrap Icons
+    $categoryIcons = [
+        'elderly' => 'bi-heart-pulse-fill text-rose-400',
+        'youth' => 'bi-lightning-charge-fill text-amber-400',
+        'health' => 'bi-shield-plus text-emerald-400',
+        'scholarship' => 'bi-mortarboard-fill text-blue-400',
+        'community' => 'bi-people-fill text-indigo-400',
     ];
-    $badgeClass = $categoryColors[$program->category] ?? 'bg-slate-100 text-slate-800 border-slate-200';
+    $catIcon = $categoryIcons[$program->category] ?? 'bi-tag-fill text-[#F3C63F]';
 @endphp
 
-<div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group hover:-translate-y-1">
+<div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#F3C63F]/60 transition-all duration-300 flex flex-col group hover:-translate-y-1">
     
     <!-- Image Header with Category Badge -->
-    <div class="relative h-52 bg-slate-100 overflow-hidden">
+    <div class="relative h-60 bg-[#181A20] overflow-hidden">
         @if($program->image_path)
             <img src="{{ asset($program->image_path) }}" alt="{{ $program->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         @else
-            <!-- Default Aesthetic Pattern if no image -->
-            <div class="w-full h-full bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 flex items-center justify-center p-6 text-center">
-                <span class="text-white/80 font-bold text-lg tracking-wide uppercase font-serif-heading">{{ $program->title }}</span>
+            <!-- Brand Aesthetic Pattern with 3D slate emblem fallback -->
+            <div class="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#181A20] via-[#22252D] to-[#121418] flex items-center justify-center p-6 text-center">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F3C63F_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div class="space-y-2 relative z-10">
+                    <div class="w-12 h-12 mx-auto rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#F3C63F] text-xl">
+                        <i class="bi {{ $catIcon }}"></i>
+                    </div>
+                    <span class="text-[#F3C63F] font-bold text-sm tracking-wide uppercase block line-clamp-1">{{ $program->title }}</span>
+                </div>
             </div>
         @endif
         
-        <div class="absolute top-3 left-3">
-            <span class="text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full border shadow-sm {{ $badgeClass }}">
-                {{ ucfirst(str_replace('_', ' ', $program->category)) }}
+        <div class="absolute top-4 left-4">
+            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full bg-[#181A20]/85 backdrop-blur-md text-[#F3C63F] border border-white/10 shadow-lg">
+                <i class="bi {{ $catIcon }}"></i>
+                <span>{{ ucfirst(str_replace('_', ' ', $program->category)) }}</span>
             </span>
         </div>
     </div>
 
     <!-- Content Body -->
-    <div class="p-6 flex flex-col flex-grow">
-        <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition leading-snug line-clamp-2 mb-2">
-            <a href="{{ route('programs.show', $program->slug) }}">
-                {{ $program->title }}
-            </a>
-        </h3>
-
-        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-6 flex-grow">
-            {{ $program->summary }}
-        </p>
+    <div class="p-6 sm:p-7 flex flex-col flex-grow space-y-4">
+        <div>
+            <h3 class="text-lg sm:text-xl font-extrabold text-[#181A20] group-hover:text-amber-600 transition tracking-tight leading-snug line-clamp-2">
+                <a href="{{ route('programs.show', $program->slug) }}">
+                    {{ $program->title }}
+                </a>
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3 font-normal mt-2.5">
+                {{ $program->summary }}
+            </p>
+        </div>
 
         <!-- Donation Progress Section -->
         @if($target > 0)
-            <div class="space-y-2 pt-4 border-t border-slate-100 mt-auto">
-                <div class="flex justify-between text-xs font-semibold">
-                    <span class="text-emerald-700">Raised: ₦{{ number_format($raised) }}</span>
-                    <span class="text-slate-400 font-normal">Goal: ₦{{ number_format($target) }}</span>
+            <div class="space-y-2.5 pt-4 border-t border-slate-100 mt-auto">
+                <div class="flex justify-between items-center text-xs">
+                    <span class="font-extrabold text-[#181A20]">₦{{ number_format($raised) }} <span class="font-normal text-slate-400">raised</span></span>
+                    <span class="text-slate-400 font-medium">Goal: ₦{{ number_format($target) }}</span>
                 </div>
 
                 <!-- Progress Bar Track -->
-                <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full transition-all duration-500" style="width: {{ $percentage }}%"></div>
+                <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden p-0.5">
+                    <div class="h-full bg-[#F3C63F] rounded-full transition-all duration-500" style="width: {{ $percentage }}%"></div>
                 </div>
 
-                <div class="text-right">
-                    <span class="text-[10px] font-bold text-slate-500">{{ $percentage }}% Funded</span>
+                <div class="flex justify-between items-center text-[11px] text-slate-500 font-medium">
+                    <span class="inline-flex items-center gap-1 text-emerald-600 font-semibold">
+                        <i class="bi bi-shield-check"></i> Verified Ground Need
+                    </span>
+                    <span class="font-bold text-[#181A20]">{{ $percentage }}% Funded</span>
                 </div>
             </div>
         @endif
 
-        <!-- Action Button -->
-        <div class="pt-4 mt-2">
-            <a href="{{ route('programs.show', $program->slug) }}" class="block w-full text-center text-xs font-bold text-emerald-700 hover:text-white bg-emerald-50 hover:bg-emerald-600 border border-emerald-200 hover:border-emerald-600 py-2.5 rounded-xl transition">
-                View Outreach Details &rarr;
+        <!-- Action Button (Carenest style) -->
+        <div class="pt-2">
+            <a href="{{ route('programs.show', $program->slug) }}" class="inline-flex items-center justify-between w-full text-xs sm:text-sm font-bold text-[#181A20] bg-slate-100 hover:bg-[#F3C63F] py-3.5 px-5 rounded-2xl transition-all duration-200 group/btn">
+                <span>View Program Details</span>
+                <span class="w-7 h-7 rounded-full bg-white text-[#181A20] flex items-center justify-center text-xs font-black group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform shadow-sm">
+                    <i class="bi bi-arrow-up-right"></i>
+                </span>
             </a>
         </div>
     </div>
