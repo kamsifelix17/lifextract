@@ -4,7 +4,6 @@
         <!-- Top Row: Clean Headline & Action CTA (Exact Carenest Header) -->
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-12 border-b border-white/10">
             <div class="space-y-1.5 max-w-xl">
-                <span class="text-xs font-black text-[#F3C63F] uppercase tracking-widest block font-mono">LISTEN • COMMENT • SHARE</span>
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                     Help Vulnerable Communities Build A Brighter Future
                 </h3>
@@ -12,7 +11,7 @@
                     Your contribution directly provides food packs, healthcare checks, and tech scholarships for grassroots families in Ikeja and across Lagos State.
                 </p>
             </div>
-            <a href="{{ route('donate') }}" class="inline-flex items-center gap-2 text-xs font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-3.5 rounded-full shadow-lg transition-all duration-200 group flex-shrink-0">
+            <a href="{{ route('donate') }}" class="inline-flex items-center justify-between sm:justify-start w-full sm:w-auto gap-2 text-xs font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-3.5 rounded-full shadow-lg transition-all duration-200 group shrink-0">
                 <span>Donate Now</span>
                 <span class="w-5 h-5 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-[10px] font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                     <i class="bi bi-arrow-up-right"></i>
@@ -21,7 +20,7 @@
         </div>
 
         <!-- Middle Row: Footer Links Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 border-b border-white/10">
             
             <!-- Col 1: Brand & Contact Info -->
             <div class="lg:col-span-2 space-y-4">

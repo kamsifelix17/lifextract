@@ -5,13 +5,13 @@
     <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
     <!-- ========================================================= -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-8 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
+        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-6 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 
                 <!-- Left: Title & Mission -->
                 <div class="lg:col-span-8 space-y-6 text-left">
-                    <div class="flex flex-wrap items-center gap-3">
+                    <div class="flex flex-wrap items-center gap-2 sm:gap-3">
                         <span class="inline-block text-xs font-bold text-[#F3C63F] uppercase tracking-widest bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
                             / Confidential Support Pathways /
                         </span>
@@ -28,15 +28,15 @@
                         You do not have to carry emotional distress, marital heartbreak, or relational confusion alone. <strong>TALKSWITHMRDEE</strong> connects individuals and couples to licensed psychologists, family therapists, and dispute mediators.
                     </p>
                     
-                    <div class="pt-3 flex flex-wrap items-center gap-4">
-                        <a href="#support-intake-form" class="inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group">
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <a href="#support-intake-form" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
                             <span>Request Confidential Guidance</span>
                             <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                 <i class="bi bi-arrow-down"></i>
                             </span>
                         </a>
 
-                        <a href="{{ route('podcast.index') }}" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition">
+                        <a href="{{ route('podcast.index') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
                             <i class="bi bi-mic text-[#F3C63F]"></i>
                             <span>Listen to Discussions</span>
                         </a>
@@ -92,7 +92,7 @@
     <section id="support-intake-form" class="py-12 bg-slate-50 min-h-screen scroll-mt-28">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
-            <div class="bg-white rounded-3xl sm:rounded-[36px] p-8 sm:p-12 border border-slate-200/80 shadow-sm space-y-8">
+            <div class="bg-white rounded-3xl sm:rounded-[36px] p-5 sm:p-12 border border-slate-200/80 shadow-sm space-y-8">
                 
                 <div class="border-b border-slate-100 pb-5">
                     <span class="text-xs font-extrabold text-[#F3C63F] uppercase tracking-wider block">Intake Submission</span>
@@ -177,14 +177,14 @@
                             <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                                 <i class="bi bi-person text-slate-400"></i> Full Name or Preferred Pseudonym *
                             </label>
-                            <input type="text" name="full_name" required placeholder="You may use a pseudonym if preferred" class="w-full text-xs px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
+                            <input type="text" name="full_name" required placeholder="You may use a pseudonym if preferred" class="w-full text-sm px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
                         </div>
 
                         <div class="space-y-1.5">
                             <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                                 <i class="bi bi-envelope text-slate-400"></i> Email Address *
                             </label>
-                            <input type="email" name="email" required placeholder="contact@example.com" class="w-full text-xs px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
+                            <input type="email" name="email" required placeholder="contact@example.com" class="w-full text-sm px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
                         </div>
                     </div>
 
@@ -192,7 +192,7 @@
                         <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                             <i class="bi bi-whatsapp text-slate-400"></i> WhatsApp / Phone (Optional for instant messaging)
                         </label>
-                        <input type="tel" name="phone" placeholder="+234..." class="w-full text-xs px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
+                        <input type="tel" name="phone" placeholder="+234..." class="w-full text-sm px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
                     </div>
 
                     <!-- Situation Summary -->
@@ -200,7 +200,7 @@
                         <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                             <i class="bi bi-chat-left-dots text-slate-400"></i> Brief Overview of Your Situation *
                         </label>
-                        <textarea name="details" rows="5" required placeholder="Please describe what you are going through, how long it has persisted, and what specific form of guidance or referral you need..." class="w-full text-xs p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition"></textarea>
+                        <textarea name="details" rows="5" required placeholder="Please describe what you are going through, how long it has persisted, and what specific form of guidance or referral you need..." class="w-full text-sm p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition"></textarea>
                     </div>
 
                     <!-- Privacy Guarantee Note -->

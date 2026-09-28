@@ -7,14 +7,14 @@
     <!-- 1. HERO SECTION (Exact Carenest Dribbble Layout)          -->
     <!-- ========================================================= -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[36px] p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[36px] p-6 sm:p-12 lg:p-16 relative overflow-hidden">
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 <!-- Left Column: Copy & CTAs (Span 7) -->
                 <div class="lg:col-span-7 space-y-6 text-left">
                     
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12]">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.14]">
                         Charity That Helps Vulnerable People
                     </h1>
 
@@ -23,15 +23,15 @@
                     </p>
 
                     <!-- Carenest Action Button with Yellow Arrow -->
-                    <div class="pt-2 flex flex-wrap items-center gap-4">
-                        <a href="{{ route('donate') }}" class="inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-3.5 rounded-full shadow-lg transition-all duration-200 group">
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <a href="{{ route('donate') }}" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-3.5 rounded-full shadow-lg transition-all duration-200 group text-center">
                             <span>Donate Now</span>
                             <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                 <i class="bi bi-arrow-up-right"></i>
                             </span>
                         </a>
 
-                        <a href="{{ route('podcast.index') }}" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-5 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition">
+                        <a href="{{ route('podcast.index') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-5 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
                             <i class="bi bi-mic text-amber-400"></i>
                             <span>Explore Podcast</span>
                         </a>
@@ -39,10 +39,16 @@
 
                     <!-- Hero Social Proof (Exact Carenest Feature) -->
                     <div class="pt-6 border-t border-white/10 flex items-center gap-3 text-xs text-slate-300">
-                        <div class="flex -space-x-2 overflow-hidden">
-                            <span class="inline-block h-7 w-7 rounded-full ring-2 ring-[#181A20] bg-amber-400 text-[#181A20] text-[10px] font-bold flex items-center justify-center"><i class="bi bi-heart-fill"></i></span>
-                            <span class="inline-block h-7 w-7 rounded-full ring-2 ring-[#181A20] bg-emerald-500 text-white text-[10px] font-bold flex items-center justify-center"><i class="bi bi-shield-check"></i></span>
-                            <span class="inline-block h-7 w-7 rounded-full ring-2 ring-[#181A20] bg-purple-500 text-white text-[10px] font-bold flex items-center justify-center"><i class="bi bi-people-fill"></i></span>
+                        <div class="flex -space-x-2 overflow-hidden shrink-0">
+                            <div class="w-8 h-8 rounded-full ring-2 ring-[#181A20] bg-[#F3C63F] text-[#181A20] flex items-center justify-center shadow-sm">
+                                <i class="bi bi-heart-fill leading-none text-[11px]"></i>
+                            </div>
+                            <div class="w-8 h-8 rounded-full ring-2 ring-[#181A20] bg-emerald-500 text-white flex items-center justify-center shadow-sm">
+                                <i class="bi bi-shield-check leading-none text-[12px]"></i>
+                            </div>
+                            <div class="w-8 h-8 rounded-full ring-2 ring-[#181A20] bg-purple-500 text-white flex items-center justify-center shadow-sm">
+                                <i class="bi bi-people-fill leading-none text-[12px]"></i>
+                            </div>
                         </div>
                         <span class="font-semibold text-slate-200">Over 2,500+ people supported across Lagos communities</span>
                     </div>
@@ -233,14 +239,14 @@
                         ];
                         $imgSrc = $prog->image_path ? asset($prog->image_path) : asset($defaultImages[$prog->category] ?? 'Images-Videos/PHOTO-2026-09-20-16-05-17.jpg');
                     @endphp
-                    <div class="p-6 sm:p-8 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 hover:border-slate-400 hover:shadow-md transition-all duration-300 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group">
-                        <div class="flex items-start sm:items-center gap-6">
-                            <span class="text-3xl sm:text-4xl font-black text-[#181A20] font-mono">{{ $num }}</span>
-                            <a href="{{ route('programs.show', $prog->slug) }}" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-slate-200 overflow-hidden flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <div class="p-5 sm:p-8 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 hover:border-slate-400 hover:shadow-md transition-all duration-300 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group">
+                        <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+                            <span class="text-2xl sm:text-4xl font-black text-[#181A20] font-mono">{{ $num }}</span>
+                            <a href="{{ route('programs.show', $prog->slug) }}" class="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl bg-slate-200 overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
                                 <img src="{{ $imgSrc }}" alt="{{ $prog->title }}" class="w-full h-full object-cover">
                             </a>
                             <div class="space-y-1">
-                                <h3 class="text-lg font-bold text-[#181A20] group-hover:text-amber-600 transition">
+                                <h3 class="text-base sm:text-lg font-bold text-[#181A20] group-hover:text-amber-600 transition">
                                     <a href="{{ route('programs.show', $prog->slug) }}">
                                         {{ $prog->title }}
                                     </a>
@@ -248,7 +254,7 @@
                                 <p class="text-xs text-slate-500 max-w-xl line-clamp-2">{{ $prog->summary }}</p>
                             </div>
                         </div>
-                        <a href="{{ route('programs.show', $prog->slug) }}" class="inline-flex items-center gap-2 text-xs font-bold text-[#181A20] bg-white border border-slate-200 hover:bg-[#181A20] hover:text-white px-5 py-3 rounded-full transition-all flex-shrink-0 group/btn">
+                        <a href="{{ route('programs.show', $prog->slug) }}" class="inline-flex items-center justify-between md:justify-start w-full md:w-auto gap-2 text-xs font-bold text-[#181A20] bg-white border border-slate-200 hover:bg-[#181A20] hover:text-white px-5 py-3 rounded-full transition-all shrink-0 group/btn">
                             <span>View Program</span>
                             <span class="w-5 h-5 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center text-[10px] font-black group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform">
                                 <i class="bi bi-arrow-up-right"></i>
@@ -269,12 +275,12 @@
     <section class="py-24 bg-[#181A20] text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
             
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 border-b border-white/10 pb-10">
-                <div class="flex items-center gap-6">
-                    <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee Gold Emblem" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-[#F3C63F] shadow-2xl flex-shrink-0">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 border-b border-white/10 pb-10">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                    <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee Gold Emblem" class="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-[#F3C63F] shadow-2xl shrink-0">
                     <div class="space-y-1.5">
-                        <span class="text-xs font-black text-[#F3C63F] uppercase tracking-widest font-mono">LISTEN • COMMENT • SHARE — “TALK AM AS E BE!”</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                        <span class="text-[11px] sm:text-xs font-black text-[#F3C63F] uppercase tracking-widest font-mono">LISTEN • COMMENT • SHARE — “TALK AM AS E BE!”</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
                             TALKSWITHMRDEE Media Hub
                         </h2>
                         <p class="text-xs sm:text-sm text-slate-400 max-w-xl">
@@ -283,7 +289,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-wrap items-center gap-3">
+                <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
                     <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-red-600 hover:bg-red-700 px-4 py-2.5 rounded-full transition shadow">
                         <i class="bi bi-youtube"></i>
                         <span>YouTube</span>

@@ -45,7 +45,7 @@
                     @endif
 
                     <!-- Title & Guest Details Card -->
-                    <div class="bg-white rounded-3xl sm:rounded-[36px] p-6 sm:p-10 border border-slate-200/80 shadow-sm space-y-6">
+                    <div class="bg-white rounded-3xl sm:rounded-[36px] p-5 sm:p-10 border border-slate-200/80 shadow-sm space-y-6">
                         
                         <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
                             <div class="flex items-center gap-2">

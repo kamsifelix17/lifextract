@@ -5,9 +5,9 @@
     <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
     <!-- ========================================================= -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-8 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
+        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-6 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 
                 <!-- Left: Title & Mission -->
                 <div class="lg:col-span-8 space-y-6 text-left">
@@ -23,7 +23,7 @@
                         Have inquiries regarding our grassroots humanitarian outreaches, wish to collaborate as a partner or sponsor, or have questions about <strong>TALKSWITHMRDEE</strong>? Reach out to our dedicated team in Ikeja, Lagos.
                     </p>
                     
-                    <div class="pt-2 flex flex-wrap items-center gap-6 text-xs text-slate-400">
+                    <div class="pt-2 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-6 text-xs text-slate-400">
                         <span class="flex items-center gap-1.5"><i class="bi bi-geo-alt-fill text-[#F3C63F]"></i> Ikeja, Lagos State, Nigeria</span>
                         <span class="flex items-center gap-1.5"><i class="bi bi-envelope-fill text-amber-400"></i> lifeextract8@gmail.com</span>
                         <span class="flex items-center gap-1.5"><i class="bi bi-telephone-fill text-emerald-400"></i> +234 907 942 4733</span>
@@ -168,7 +168,7 @@
 
                 <!-- Right: Contact Form Column (Span 7) -->
                 <div class="lg:col-span-7">
-                    <div class="bg-white p-7 sm:p-10 rounded-3xl sm:rounded-[36px] border border-slate-200/80 shadow-sm space-y-6">
+                    <div class="bg-white p-5 sm:p-10 rounded-3xl sm:rounded-[36px] border border-slate-200/80 shadow-sm space-y-6">
                         
                         <div class="border-b border-slate-100 pb-4">
                             <span class="text-xs font-extrabold text-[#F3C63F] uppercase tracking-wider block">Send A Message</span>
@@ -191,14 +191,14 @@
                                     <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                                         <i class="bi bi-person text-slate-400"></i> Your Name *
                                     </label>
-                                    <input type="text" name="full_name" required placeholder="John Doe" class="w-full text-xs px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
+                                    <input type="text" name="full_name" required placeholder="John Doe" class="w-full text-sm px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
                                 </div>
 
                                 <div class="space-y-1.5">
                                     <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                                         <i class="bi bi-envelope text-slate-400"></i> Email Address *
                                     </label>
-                                    <input type="email" name="email" required placeholder="john@example.com" class="w-full text-xs px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
+                                    <input type="email" name="email" required placeholder="john@example.com" class="w-full text-sm px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
                                 </div>
                             </div>
 
@@ -206,14 +206,14 @@
                                 <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                                     <i class="bi bi-whatsapp text-slate-400"></i> Phone / WhatsApp (Optional)
                                 </label>
-                                <input type="tel" name="phone" placeholder="+234..." class="w-full text-xs px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
+                                <input type="tel" name="phone" placeholder="+234..." class="w-full text-sm px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition">
                             </div>
 
                             <div class="space-y-1.5">
                                 <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                                     <i class="bi bi-chat-square-text text-slate-400"></i> Your Message *
                                 </label>
-                                <textarea name="details" rows="5" required placeholder="How can we collaborate, assist, or answer your questions?..." class="w-full text-xs p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition"></textarea>
+                                <textarea name="details" rows="5" required placeholder="How can we collaborate, assist, or answer your questions?..." class="w-full text-sm p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition"></textarea>
                             </div>
 
                             <div class="pt-2">

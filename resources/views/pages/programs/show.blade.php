@@ -34,7 +34,7 @@
                 <!-- Left Main Content (Span 8) -->
                 <div class="lg:col-span-8 space-y-8">
                     
-                    <div class="bg-white rounded-3xl sm:rounded-[36px] p-6 sm:p-10 border border-slate-200/80 shadow-sm space-y-6">
+                    <div class="bg-white rounded-3xl sm:rounded-[36px] p-5 sm:p-10 border border-slate-200/80 shadow-sm space-y-6">
                         
                         <!-- Badges Header -->
                         <div class="flex flex-wrap items-center gap-3">
@@ -59,7 +59,7 @@
                         </h1>
 
                         <!-- Featured Media / Image Showcase -->
-                        <div class="w-full h-72 sm:h-96 rounded-3xl overflow-hidden bg-[#181A20] relative border border-slate-200/80 shadow-inner flex items-center justify-center">
+                        <div class="w-full h-56 sm:h-96 rounded-2xl sm:rounded-3xl overflow-hidden bg-[#181A20] relative border border-slate-200/80 shadow-inner flex items-center justify-center">
                             @if($program->image_path)
                                 <img src="{{ asset($program->image_path) }}" alt="{{ $program->title }}" class="w-full h-full object-cover">
                             @else
@@ -217,9 +217,9 @@
                                     <span class="text-slate-400">Account:</span>
                                     <span class="font-mono font-bold text-[#F3C63F]">1234567890</span>
                                 </div>
-                                <div class="flex justify-between">
+                                <div class="flex flex-col sm:flex-row sm:justify-between gap-0.5 sm:gap-2">
                                     <span class="text-slate-400">Account Name:</span>
-                                    <span class="font-bold text-white text-right">Lifextract Humanitarian Foundation</span>
+                                    <span class="font-bold text-white sm:text-right">Lifextract Humanitarian Foundation</span>
                                 </div>
                             </div>
                             

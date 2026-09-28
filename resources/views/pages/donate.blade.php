@@ -5,9 +5,9 @@
     <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
     <!-- ========================================================= -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-8 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
+        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-6 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 
                 <!-- Left: Title & Mission -->
                 <div class="lg:col-span-8 space-y-6 text-left">
@@ -23,15 +23,15 @@
                         At Lifextract Humanitarian Foundation, we believe in putting people before publicity. Every single naira donated directly purchases food parcels for elderly roadside traders, pays life-saving medical bills, and funds vocational tech apprenticeships in Lagos.
                     </p>
                     
-                    <div class="pt-3 flex flex-wrap items-center gap-4">
-                        <a href="#bank-details" class="inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group">
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <a href="#bank-details" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
                             <span>View Bank Transfer Details</span>
                             <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                 <i class="bi bi-arrow-down"></i>
                             </span>
                         </a>
 
-                        <a href="{{ route('programs.index') }}#browse-programs" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition">
+                        <a href="{{ route('programs.index') }}#browse-programs" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
                             <i class="bi bi-grid-fill text-[#F3C63F]"></i>
                             <span>Pick a Specific Program</span>
                         </a>
@@ -117,9 +117,9 @@
                                     <span class="text-slate-400">Bank Name:</span>
                                     <span class="font-bold text-white text-sm">Zenith Bank / GTBank</span>
                                 </div>
-                                <div class="flex justify-between items-center py-1 border-b border-white/10">
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-1 border-b border-white/10 gap-0.5 sm:gap-2">
                                     <span class="text-slate-400">Account Name:</span>
-                                    <span class="font-bold text-white text-right">Lifextract Humanitarian Foundation</span>
+                                    <span class="font-bold text-white sm:text-right">Lifextract Humanitarian Foundation</span>
                                 </div>
                                 <div class="flex justify-between items-center pt-2">
                                     <span class="text-slate-400">Account Number:</span>

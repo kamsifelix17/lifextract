@@ -5,17 +5,17 @@
     <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
     <!-- ========================================================= -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-14">
-        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-8 sm:p-14 lg:p-20 relative overflow-hidden shadow-2xl">
+        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-6 sm:p-14 lg:p-20 relative overflow-hidden shadow-2xl">
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 <!-- Left: Text Content with generous breathing room -->
-                <div class="lg:col-span-8 space-y-7 text-left">
+                <div class="lg:col-span-8 space-y-6 sm:space-y-7 text-left">
                     <span class="inline-block text-xs font-bold text-[#F3C63F] uppercase tracking-widest bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
                         / About Our Organization /
                     </span>
 
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.14]">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.14]">
                         Putting People Before Publicity
                     </h1>
 
@@ -23,15 +23,15 @@
                         Lifextract Humanitarian Foundation is dedicated to transforming grassroots communities across Lagos, Nigeria. We bridge essential physical aid with emotional clarity through our multimedia storytelling platform, <strong class="text-[#F3C63F] font-semibold">TALKSWITHMRDEE</strong>.
                     </p>
                     
-                    <div class="pt-4 flex flex-wrap items-center gap-4">
-                        <a href="{{ route('donate') }}" class="inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group">
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <a href="{{ route('donate') }}" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
                             <span>Support Our Work</span>
                             <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                 <i class="bi bi-arrow-up-right"></i>
                             </span>
                         </a>
 
-                        <a href="{{ route('programs.index') }}#browse-programs" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition">
+                        <a href="{{ route('programs.index') }}#browse-programs" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
                             <span>Our Active Programs</span>
                         </a>
                     </div>
@@ -40,7 +40,7 @@
                 <!-- Right: Visual Badge Showcase -->
                 <div class="lg:col-span-4 flex justify-center lg:justify-end">
                     <div class="relative p-3 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-md">
-                        <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee" class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl object-cover border border-[#F3C63F]/40 shadow-inner">
+                        <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee" class="w-40 h-40 sm:w-56 sm:h-56 rounded-2xl object-cover border border-[#F3C63F]/40 shadow-inner">
                         <div class="absolute -bottom-3 -right-3 bg-[#F3C63F] text-[#181A20] font-black text-[10px] uppercase px-3 py-1.5 rounded-full shadow-lg">
                             ★ Ikeja, Lagos
                         </div>
@@ -50,13 +50,13 @@
             </div>
 
             <!-- Stats Bar with Generous Margin & Spacing -->
-            <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8 text-left">
+            <div class="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-left">
                 <div class="space-y-1">
-                    <span class="text-3xl sm:text-4xl font-black text-white block tracking-tight">2,500+</span>
+                    <span class="text-2xl sm:text-4xl font-black text-white block tracking-tight">2,500+</span>
                     <span class="text-xs font-medium text-slate-400">Direct Beneficiaries</span>
                 </div>
                 <div class="space-y-1">
-                    <span class="text-3xl sm:text-4xl font-black text-white block tracking-tight">100%</span>
+                    <span class="text-2xl sm:text-4xl font-black text-white block tracking-tight">100%</span>
                     <span class="text-xs font-medium text-slate-400">Grassroots Focused</span>
                 </div>
                 <div class="space-y-1">
