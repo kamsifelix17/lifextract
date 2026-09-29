@@ -117,9 +117,16 @@
         </div>
 
         <!-- Bottom Row: Huge Brand Name & Copyright (Exact Carenest Footer) -->
-        <div class="pt-4 flex flex-col sm:flex-row justify-between items-center text-slate-500 gap-4">
-            <span class="text-3xl sm:text-4xl font-black text-white tracking-tight">Lifextract</span>
-            <p>&copy; {{ date('Y') }} Lifextract Humanitarian Foundation & TALKSWITHMRDEE. All rights reserved.</p>
+        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+            <div class="flex flex-col sm:flex-row items-center sm:items-baseline gap-2 sm:gap-4 text-center sm:text-left">
+                <span class="text-2xl sm:text-3xl font-black text-white tracking-tight">Lifextract</span>
+                <p>&copy; {{ date('Y') }} Lifextract Humanitarian Foundation & TALKSWITHMRDEE. All rights reserved.</p>
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-slate-400">
+                <span>Crafted with</span>
+                <i class="bi bi-heart-fill text-rose-500 text-[11px]"></i>
+                <span>• Website by <strong class="text-slate-200 font-bold hover:text-[#F3C63F] transition">Impact Dev</strong></span>
+            </div>
         </div>
 
     </div>

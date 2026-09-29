@@ -14,14 +14,22 @@
         'community' => 'bi-people-fill text-indigo-400',
     ];
     $catIcon = $categoryIcons[$program->category] ?? 'bi-tag-fill text-[#F3C63F]';
+    $defaultCategoryImages = [
+        'elderly' => 'images/program-elderly-traders.jpg',
+        'youth' => 'images/program-youth-tech.jpg',
+        'health' => 'images/program-health-outreach.jpg',
+        'scholarship' => 'images/program-youth-tech.jpg',
+        'community' => 'images/program-elderly-traders.jpg',
+    ];
+    $cardImage = $defaultCategoryImages[$program->category] ?? ($program->image_path ?: 'images/lifextract-community-outreach.jpg');
 @endphp
 
 <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#F3C63F]/60 transition-all duration-300 flex flex-col group hover:-translate-y-1">
     
     <!-- Image Header with Category Badge -->
     <div class="relative h-60 bg-[#181A20] overflow-hidden">
-        @if($program->image_path)
-            <img src="{{ asset($program->image_path) }}" alt="{{ $program->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        @if($cardImage)
+            <img src="{{ asset($cardImage) }}" alt="{{ $program->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         @else
             <!-- Brand Aesthetic Pattern with 3D slate emblem fallback -->
             <div class="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#181A20] via-[#22252D] to-[#121418] flex items-center justify-center p-6 text-center">

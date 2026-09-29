@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>{{ $title ?? 'Lifextract Humanitarian Foundation & TalksWithMrDee' }}</title>
     
     <!-- Meta Descriptions for SEO -->
@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<body class="bg-[#FBFBFC] text-[#1E2024] antialiased flex flex-col min-h-screen">
+<body class="bg-[#FBFBFC] text-[#1E2024] antialiased flex flex-col min-h-screen overflow-x-hidden w-full">
 
     <!-- 1. Carenest Floating Top Navigation Bar -->
     <x-navbar />

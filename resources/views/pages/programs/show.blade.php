@@ -14,6 +14,14 @@
             'community' => 'bi-people-fill text-indigo-500',
         ];
         $catIcon = $categoryIcons[$program->category] ?? 'bi-tag-fill text-[#F3C63F]';
+        $defaultCategoryImages = [
+            'elderly' => 'images/program-elderly-traders.jpg',
+            'youth' => 'images/program-youth-tech.jpg',
+            'health' => 'images/program-health-outreach.jpg',
+            'scholarship' => 'images/program-youth-tech.jpg',
+            'community' => 'images/program-elderly-traders.jpg',
+        ];
+        $displayImage = $defaultCategoryImages[$program->category] ?? ($program->image_path ?: 'images/lifextract-community-outreach.jpg');
     @endphp
 
     <article class="py-10 bg-slate-50 min-h-screen">
@@ -60,8 +68,8 @@
 
                         <!-- Featured Media / Image Showcase -->
                         <div class="w-full h-56 sm:h-96 rounded-2xl sm:rounded-3xl overflow-hidden bg-[#181A20] relative border border-slate-200/80 shadow-inner flex items-center justify-center">
-                            @if($program->image_path)
-                                <img src="{{ asset($program->image_path) }}" alt="{{ $program->title }}" class="w-full h-full object-cover">
+                            @if($displayImage)
+                                <img src="{{ asset($displayImage) }}" alt="{{ $program->title }}" class="w-full h-full object-cover">
                             @else
                                 <div class="w-full h-full relative overflow-hidden bg-gradient-to-br from-[#181A20] via-[#22252D] to-[#121418] flex items-center justify-center p-8 text-center">
                                     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F3C63F_1px,transparent_1px)] [background-size:20px_20px]"></div>

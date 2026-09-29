@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use App\Models\Program;
 use App\Models\Episode;
 use App\Models\ImpactStory;
+use App\Models\Program;
+use Illuminate\Database\Seeder;
 
 class PlatformContentSeeder extends Seeder
 {
@@ -20,6 +20,7 @@ class PlatformContentSeeder extends Seeder
             'description' => 'Many elderly women in our communities rely on small roadside stalls for their daily survival. This outreach provides direct cash grants, dignified trading equipment, food parcels, and free blood pressure and sugar checkups with qualified healthcare professionals.',
             'target_amount' => 2500000.00,
             'raised_amount' => 1450000.00,
+            'image_path' => 'images/program-elderly-traders.jpg',
             'is_featured' => true,
         ]);
 
@@ -31,6 +32,7 @@ class PlatformContentSeeder extends Seeder
             'description' => 'A 12-week intensive vocational and tech bootcamp designed to take underprivileged youth from zero skills to job-ready professionals with starter toolkits and mentorship.',
             'target_amount' => 5000000.00,
             'raised_amount' => 3200000.00,
+            'image_path' => 'images/program-youth-tech.jpg',
             'is_featured' => true,
         ]);
 
@@ -42,6 +44,7 @@ class PlatformContentSeeder extends Seeder
             'description' => 'Partnering with licensed doctors and nurses to provide free health consultations, hypertension screenings, blood sugar tests, and essential drugs in grassroots neighborhoods.',
             'target_amount' => 3000000.00,
             'raised_amount' => 2100000.00,
+            'image_path' => 'images/program-health-outreach.jpg',
             'is_featured' => true,
         ]);
 

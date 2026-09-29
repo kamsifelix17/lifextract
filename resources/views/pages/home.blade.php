@@ -58,11 +58,11 @@
                 <!-- Right Column: Hero Image with Floating Testimonial Card (Exact Carenest Feature) -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-800 aspect-[4/3] sm:aspect-[4/3]">
-                        <img src="{{ asset('Images-Videos/PHOTO-2026-09-20-16-05-17.jpg') }}" alt="Humanitarian Outreach in Lagos" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/lifextract-hero-outreach.jpg') }}" alt="Lifextract Humanitarian Outreach in Lagos" class="w-full h-full object-cover">
                         
                         <!-- Floating Testimonial Pill (from Carenest) -->
-                        <div class="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-[#181A20]/90 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl shadow-xl text-left flex items-start gap-3">
-                            <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="Mr Dee" class="w-9 h-9 rounded-full object-cover border border-[#F3C63F] flex-shrink-0">
+                        <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-xs bg-[#181A20]/90 backdrop-blur-md border border-white/15 p-3 sm:p-3.5 rounded-2xl shadow-xl text-left flex items-start gap-3">
+                            <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="Mr Dee" class="w-9 h-9 rounded-full object-cover border border-[#F3C63F] shrink-0">
                             <div>
                                 <p class="text-[11px] text-slate-200 leading-tight">
                                     “Putting people before publicity. Giving every voice dignity.”
@@ -184,17 +184,17 @@
                 <!-- Right: Clean Photo Showcase + Big Metric Stat Cards (Span 6) -->
                 <div class="lg:col-span-6 space-y-6">
                     <div class="rounded-3xl overflow-hidden shadow-lg aspect-video bg-slate-200">
-                        <img src="{{ asset('Images-Videos/PHOTO-2026-09-20-16-05-17(1).jpg') }}" alt="Community Outreach" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/lifextract-community-outreach.jpg') }}" alt="Lifextract Community Outreach in Lagos" class="w-full h-full object-cover">
                     </div>
 
                     <!-- Clean Stat Cards (Exact Carenest Component) -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-1">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-1">
                             <span class="text-3xl sm:text-4xl font-black text-[#181A20] block">2,500+</span>
                             <span class="text-xs font-bold text-[#181A20]">People Reached</span>
                             <p class="text-[11px] text-slate-500">Directly supported across outreach programs in Lagos.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-1">
+                        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-1">
                             <span class="text-3xl sm:text-4xl font-black text-[#181A20] block">{{ $programsCount }}+</span>
                             <span class="text-xs font-bold text-[#181A20]">Active Programs</span>
                             <p class="text-[11px] text-slate-500">Elderly care, youth skills, health aid, and podcasting.</p>
@@ -215,11 +215,11 @@
             <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div class="space-y-2">
                     <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">/ Programs /</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#181A20] tracking-tight">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-[#181A20] tracking-tight">
                         Programs That Support And Protect Vulnerable People
                     </h2>
                 </div>
-                <a href="{{ route('programs.index') }}#browse-programs" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-[#181A20] hover:bg-black px-4 py-2.5 rounded-full transition flex-shrink-0 group">
+                <a href="{{ route('programs.index') }}#browse-programs" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-[#181A20] hover:bg-black px-5 py-2.5 rounded-full transition w-fit shrink-0 group">
                     <span>All Programs</span>
                     <span class="w-4 h-4 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center text-[9px] font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                         <i class="bi bi-arrow-up-right"></i>
@@ -227,39 +227,81 @@
                 </a>
             </div>
 
-            <!-- Numbered Programs Rows (Dynamic from Featured Programs) -->
+            <!-- Numbered Programs Rows (Responsive Native Card for Mobile, Clean Row for Desktop) -->
             <div class="space-y-6">
                 @forelse($featuredPrograms as $index => $prog)
                     @php
                         $num = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
                         $defaultImages = [
-                            'elderly' => 'Images-Videos/PHOTO-2026-09-20-16-05-17(1).jpg',
-                            'youth' => 'Images-Videos/PHOTO-2026-09-20-16-05-17.jpg',
-                            'health' => 'Images-Videos/PHOTO-2026-09-20-16-05-17.jpg',
+                            'elderly' => 'images/program-elderly-traders.jpg',
+                            'youth' => 'images/program-youth-tech.jpg',
+                            'health' => 'images/program-health-outreach.jpg',
+                            'scholarship' => 'images/program-youth-tech.jpg',
+                            'community' => 'images/program-elderly-traders.jpg',
                         ];
-                        $imgSrc = $prog->image_path ? asset($prog->image_path) : asset($defaultImages[$prog->category] ?? 'Images-Videos/PHOTO-2026-09-20-16-05-17.jpg');
+                        $imgSrc = $defaultImages[$prog->category] ?? ($prog->image_path ? asset($prog->image_path) : asset('images/lifextract-community-outreach.jpg'));
                     @endphp
-                    <div class="p-5 sm:p-8 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 hover:border-slate-400 hover:shadow-md transition-all duration-300 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group">
-                        <div class="flex items-start sm:items-center gap-4 sm:gap-6">
-                            <span class="text-2xl sm:text-4xl font-black text-[#181A20] font-mono">{{ $num }}</span>
-                            <a href="{{ route('programs.show', $prog->slug) }}" class="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl bg-slate-200 overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
-                                <img src="{{ $imgSrc }}" alt="{{ $prog->title }}" class="w-full h-full object-cover">
-                            </a>
-                            <div class="space-y-1">
-                                <h3 class="text-base sm:text-lg font-bold text-[#181A20] group-hover:text-amber-600 transition">
-                                    <a href="{{ route('programs.show', $prog->slug) }}">
-                                        {{ $prog->title }}
-                                    </a>
-                                </h3>
-                                <p class="text-xs text-slate-500 max-w-xl line-clamp-2">{{ $prog->summary }}</p>
+                    <div class="p-4 sm:p-6 md:p-8 rounded-3xl bg-white md:bg-[#FBFBFC] border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 group">
+                        <!-- Desktop Layout (md: and up) -->
+                        <div class="hidden md:flex items-center justify-between gap-6">
+                            <div class="flex items-center gap-6">
+                                <span class="text-3xl lg:text-4xl font-black text-[#181A20] font-mono shrink-0">{{ $num }}</span>
+                                <a href="{{ route('programs.show', $prog->slug) }}" class="w-20 h-20 rounded-2xl bg-slate-100 overflow-hidden shrink-0 shadow-sm border border-slate-200 group-hover:scale-105 transition-transform">
+                                    <img src="{{ asset($imgSrc) }}" alt="{{ $prog->title }}" class="w-full h-full object-cover">
+                                </a>
+                                <div class="space-y-1">
+                                    <h3 class="text-base lg:text-lg font-bold text-[#181A20] group-hover:text-amber-600 transition">
+                                        <a href="{{ route('programs.show', $prog->slug) }}">
+                                            {{ $prog->title }}
+                                        </a>
+                                    </h3>
+                                    <p class="text-xs text-slate-500 max-w-xl line-clamp-2 leading-relaxed">{{ $prog->summary }}</p>
+                                </div>
                             </div>
+                            <a href="{{ route('programs.show', $prog->slug) }}" class="inline-flex items-center gap-2 text-xs font-bold text-[#181A20] bg-white border border-slate-200 hover:bg-[#181A20] hover:text-white px-5 py-3 rounded-full transition-all shrink-0 group/btn shadow-sm">
+                                <span>View Program</span>
+                                <span class="w-5 h-5 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center text-[10px] font-black group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </a>
                         </div>
-                        <a href="{{ route('programs.show', $prog->slug) }}" class="inline-flex items-center justify-between md:justify-start w-full md:w-auto gap-2 text-xs font-bold text-[#181A20] bg-white border border-slate-200 hover:bg-[#181A20] hover:text-white px-5 py-3 rounded-full transition-all shrink-0 group/btn">
-                            <span>View Program</span>
-                            <span class="w-5 h-5 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center text-[10px] font-black group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </span>
-                        </a>
+
+                        <!-- Mobile Native Card Layout (< md) -->
+                        <div class="md:hidden space-y-3.5">
+                            <!-- Top Media Banner with Number & Category Overlay -->
+                            <a href="{{ route('programs.show', $prog->slug) }}" class="relative block h-44 w-full rounded-2xl overflow-hidden bg-slate-100 shadow-sm">
+                                <img src="{{ asset($imgSrc) }}" alt="{{ $prog->title }}" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#181A20]/85 via-black/20 to-black/30"></div>
+                                
+                                <div class="absolute top-3 left-3 flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-full bg-[#181A20]/90 backdrop-blur-md text-[#F3C63F] font-mono font-black text-xs flex items-center justify-center shadow">
+                                        {{ $num }}
+                                    </span>
+                                    <span class="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#181A20] shadow-sm">
+                                        {{ ucfirst(str_replace('_', ' ', $prog->category)) }}
+                                    </span>
+                                </div>
+                                
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <h3 class="text-base font-bold text-white leading-snug drop-shadow">
+                                        {{ $prog->title }}
+                                    </h3>
+                                </div>
+                            </a>
+
+                            <!-- Description -->
+                            <p class="text-xs text-slate-600 leading-relaxed px-0.5">
+                                {{ $prog->summary }}
+                            </p>
+
+                            <!-- Cohesive Mobile Action Button -->
+                            <a href="{{ route('programs.show', $prog->slug) }}" class="flex items-center justify-center gap-2 w-full text-xs font-bold text-white bg-[#181A20] hover:bg-black py-3 px-4 rounded-xl shadow-sm transition">
+                                <span>View Program Details</span>
+                                <span class="w-4 h-4 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center text-[9px] font-black">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 @empty
                     <p class="text-xs text-slate-500 py-6 text-center">No active programs available.</p>
@@ -279,7 +321,7 @@
                 <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
                     <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee Gold Emblem" class="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-[#F3C63F] shadow-2xl shrink-0">
                     <div class="space-y-1.5">
-                        <span class="text-[11px] sm:text-xs font-black text-[#F3C63F] uppercase tracking-widest font-mono">LISTEN • COMMENT • SHARE — “TALK AM AS E BE!”</span>
+                        <span class="text-[11px] sm:text-xs font-black text-[#F3C63F] uppercase tracking-widest font-mono block break-words">LISTEN • COMMENT • SHARE — “TALK AM AS E BE!”</span>
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
                             TALKSWITHMRDEE Media Hub
                         </h2>
