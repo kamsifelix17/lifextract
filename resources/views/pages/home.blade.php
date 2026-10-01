@@ -164,12 +164,12 @@
 
                     <!-- Mini Tabs -->
                     <div class="flex items-center gap-6 border-b border-slate-200 pb-3 text-xs font-bold">
-                        <span class="text-[#181A20] border-b-2 border-[#181A20] pb-3 -mb-3.5">Our Mission</span>
-                        <span class="text-slate-400">Our Vision</span>
-                        <span class="text-slate-400">Core Values</span>
+                        <button type="button" onclick="switchAboutTab('mission')" id="tab-mission" class="text-[#181A20] border-b-2 border-[#181A20] pb-3 -mb-3.5 focus:outline-none cursor-pointer">Our Mission</button>
+                        <button type="button" onclick="switchAboutTab('vision')" id="tab-vision" class="text-slate-400 hover:text-slate-600 pb-3 -mb-3.5 focus:outline-none cursor-pointer">Our Vision</button>
+                        <button type="button" onclick="switchAboutTab('values')" id="tab-values" class="text-slate-400 hover:text-slate-600 pb-3 -mb-3.5 focus:outline-none cursor-pointer">Core Values</button>
                     </div>
 
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p id="about-statement" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         We are a non-profit organization dedicated to supporting individuals and families in need through care, education, and community-based programs. Our work focuses on creating sustainable pathways where people can thrive with confidence and dignity.
                     </p>
 
@@ -204,6 +204,32 @@
 
             </div>
         </div>
+
+        <script>
+            function switchAboutTab(tabName) {
+                const statements = {
+                    mission: "We are a non-profit organization dedicated to supporting individuals and families in need through care, education, and community-based programs. Our work focuses on creating sustainable pathways where people can thrive with confidence and dignity.",
+                    vision: "To build a sustainable digital and humanitarian ecosystem combining grassroots impact with authentic storytelling and emotional guidance—where every vulnerable person finds opportunity, support, and dignity.",
+                    values: "Rooted in authenticity, compassion, professionalism, and transparency, we put people before publicity—fostering genuine human connections and verifiable community impact."
+                };
+
+                const tabs = ['mission', 'vision', 'values'];
+                const statementEl = document.getElementById('about-statement');
+                if (statementEl && statements[tabName]) {
+                    statementEl.textContent = statements[tabName];
+                }
+
+                tabs.forEach(tab => {
+                    const btn = document.getElementById('tab-' + tab);
+                    if (!btn) return;
+                    if (tab === tabName) {
+                        btn.className = "text-[#181A20] border-b-2 border-[#181A20] pb-3 -mb-3.5 focus:outline-none cursor-pointer";
+                    } else {
+                        btn.className = "text-slate-400 hover:text-slate-600 pb-3 -mb-3.5 focus:outline-none cursor-pointer";
+                    }
+                });
+            }
+        </script>
     </section>
 
     <!-- ========================================================= -->
@@ -441,60 +467,81 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 8. WHAT SUPPORTERS SAY (Carenest Testimonial Grid)       -->
+    <!-- 8. WHAT SUPPORTERS SAY (Testimonials & Community Trust)  -->
     <!-- ========================================================= -->
-    <section class="py-20 bg-[#FBFBFC] border-t border-slate-200/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <section class="py-14 sm:py-20 bg-[#FBFBFC] border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">/ Testimonials /</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#181A20] tracking-tight leading-tight">
+                        What Beneficiaries & Partners Say
+                    </h2>
+                </div>
+                <a href="{{ route('impact') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#181A20] hover:text-[#eab92d] transition group self-start sm:self-auto">
+                    <span>View All Impact Stories</span>
+                    <i class="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Balanced Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 {{ $impactStories->count() > 1 ? 'lg:grid-cols-3' : '' }} gap-5 sm:gap-6 items-stretch">
                 
-                <!-- Left: Rating Card (Exact Carenest Feature) -->
-                <div class="lg:col-span-4 bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">/ Community Trust /</span>
-                    <div class="flex items-center gap-2">
-                        <span class="text-4xl font-black text-[#181A20]">4.9</span>
-                        <span class="text-amber-500 text-sm flex gap-0.5">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </span>
+                <!-- Community Trust Card (Donor Voice) -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4 sm:space-y-5 hover:border-slate-300 transition">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-[10px] sm:text-[11px] font-bold text-[#181A20] uppercase tracking-wider">
+                                <i class="bi bi-shield-check text-amber-500"></i>
+                                Community Trust
+                            </span>
+                            <i class="bi bi-quote text-xl sm:text-2xl text-slate-300"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                            “Supporting this charity has been a meaningful experience. Knowing that my contribution provides healthcare and education for youth and the elderly gives me confidence that our support creates lasting impact.”
+                        </p>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Supporting this charity has been a meaningful experience. Knowing that my contribution provides healthcare and education for youth and the elderly gives me confidence that our support creates lasting impact.
-                    </p>
-                    <div class="pt-2 flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center font-bold text-xs">DA</div>
+
+                    <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center font-bold text-xs shrink-0 shadow-sm">
+                            DA
+                        </div>
                         <div>
                             <span class="text-xs font-bold text-[#181A20] block">David Adeleke</span>
-                            <span class="text-[10px] text-slate-400">Community Donor</span>
+                            <span class="text-[10px] sm:text-[11px] text-slate-400">Community Donor</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right: Testimonials from Database -->
-                <div class="lg:col-span-8 space-y-4">
-                    <div class="space-y-1">
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">/ Testimonials /</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#181A20] tracking-tight">
-                            What Beneficiaries & Partners Say
-                        </h2>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        @foreach($impactStories->take(2) as $story)
-                            <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
-                                <p class="text-xs text-slate-600 leading-relaxed italic">
-                                    “{{ $story->story }}”
-                                </p>
-                                <div class="pt-2 border-t border-slate-100 flex justify-between items-center text-[11px]">
-                                    <span class="font-bold text-[#181A20]">{{ $story->name }}</span>
-                                    <span class="text-slate-400">{{ $story->title }}</span>
-                                </div>
+                <!-- Beneficiary Impact Stories -->
+                @foreach($impactStories->take(2) as $story)
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4 sm:space-y-5 hover:border-slate-300 transition">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-[10px] sm:text-[11px] font-bold text-emerald-800 uppercase tracking-wider">
+                                    <i class="bi bi-heart-fill text-emerald-500"></i>
+                                    Beneficiary Story
+                                </span>
+                                <i class="bi bi-quote text-xl sm:text-2xl text-slate-300"></i>
                             </div>
-                        @endforeach
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                                “{{ $story->story }}”
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-100 flex items-center gap-3">
+                            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm">
+                                <i class="bi bi-person-fill text-sm"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-[#181A20] block">{{ $story->name }}</span>
+                                <span class="text-[10px] sm:text-[11px] text-slate-400">{{ $story->title }}</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                @endforeach
 
             </div>
         </div>
