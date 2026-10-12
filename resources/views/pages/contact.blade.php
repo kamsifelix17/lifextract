@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot:title>Contact Us — Lifextract Humanitarian Foundation & TALKSWITHMRDEE</x-slot:title>
+    <x-slot:title>Contact Us — Lifextract Humanitarian Foundation</x-slot:title>
 
     <!-- ========================================================= -->
     <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
@@ -20,7 +20,7 @@
                     </h1>
 
                     <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-                        Have inquiries regarding our grassroots humanitarian outreaches, wish to collaborate as a partner or sponsor, or have questions about <strong>TALKSWITHMRDEE</strong>? Reach out to our dedicated team in Ikeja, Lagos.
+                        Have inquiries regarding our grassroots humanitarian outreaches, or wish to collaborate as a partner or sponsor? Reach out to our dedicated team in Ikeja, Lagos.
                     </p>
                     
                     <div class="pt-2 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-6 text-xs text-slate-400">
@@ -38,7 +38,7 @@
                         </div>
                         <div>
                             <span class="text-2xl sm:text-3xl font-black text-white block tracking-tight">Direct Support</span>
-                            <span class="text-xs text-slate-400 mt-1 block">We respond promptly to all grassroots inquiries, community nominations, and media pitches.</span>
+                            <span class="text-xs text-slate-400 mt-1 block">We respond promptly to all grassroots inquiries, community nominations, and partnerships.</span>
                         </div>
                         <div class="pt-2 border-t border-white/10">
                             <span class="text-[11px] font-bold text-[#F3C63F] uppercase tracking-wider block">
@@ -107,18 +107,6 @@
                                 </div>
                             </div>
 
-                            <!-- Podcast Email -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-2xl bg-slate-100 text-[#181A20] flex items-center justify-center text-lg flex-shrink-0">
-                                    <i class="bi bi-mic-fill text-purple-500"></i>
-                                </div>
-                                <div class="space-y-0.5">
-                                    <strong class="text-sm font-extrabold text-[#181A20] block">TalksWithMrDee Inquiries:</strong>
-                                    <a href="mailto:talkswithmrdee@gmail.com" class="text-slate-800 hover:text-amber-600 font-semibold transition">talkswithmrdee@gmail.com</a>
-                                    <p class="text-[11px] text-slate-400">Media pitches, guest appearances, and podcast collaborations.</p>
-                                </div>
-                            </div>
-
                         </div>
 
                         <!-- Foundation Social Channels -->
@@ -143,27 +131,7 @@
                             </div>
                         </div>
 
-                        <!-- TalksWithMrDee Social Channels -->
-                        <div class="pt-4 border-t border-slate-100 space-y-3">
-                            <span class="text-xs font-bold text-[#181A20] uppercase tracking-wider block font-mono">TalksWithMrDee (“TALK AM AS E BE!”)</span>
-                            <div class="flex items-center gap-2">
-                                <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-red-600 hover:text-white text-slate-700 flex items-center justify-center text-sm transition" title="YouTube Channel">
-                                    <i class="bi bi-youtube"></i>
-                                </a>
-                                <a href="https://www.instagram.com/talks_with_mrdee?stkn=bGtlMGdkMWJjcGh6" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-pink-600 hover:text-white text-slate-700 flex items-center justify-center text-sm transition" title="Instagram">
-                                    <i class="bi bi-instagram"></i>
-                                </a>
-                                <a href="https://www.tiktok.com/@talkswithmrdee?_r=1&_t=ZN-9A3kfMF36Zi" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-black hover:text-white text-slate-700 flex items-center justify-center text-sm transition" title="TikTok">
-                                    <i class="bi bi-tiktok"></i>
-                                </a>
-                                <a href="https://x.com/TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-[#181A20] hover:text-white text-slate-700 flex items-center justify-center text-sm transition" title="X (Twitter)">
-                                    <i class="bi bi-twitter-x"></i>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
-
                 </div>
 
                 <!-- Right: Contact Form Column (Span 7) -->

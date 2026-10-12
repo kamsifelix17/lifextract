@@ -123,9 +123,9 @@
                     <span class="w-10 h-10 rounded-2xl bg-[#181A20] text-[#F3C63F] flex items-center justify-center font-bold text-sm">
                         <i class="bi bi-camera-video-fill"></i>
                     </span>
-                    <h3 class="text-base font-bold text-[#181A20]">3. Public Documentation</h3>
+                    <h3 class="text-base font-bold text-[#181A20]">3. Transparent Documentation</h3>
                     <p class="text-xs text-slate-500 leading-relaxed">
-                        Every outreach is recorded and showcased on TALKSWITHMRDEE with utmost respect for beneficiary dignity and complete transparency.
+                        Every outreach is securely documented and shared with our donors and sponsors with the utmost respect for beneficiary dignity.
                     </p>
                 </div>
 

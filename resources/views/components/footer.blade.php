@@ -1,7 +1,7 @@
 <footer class="bg-[#121418] text-slate-400 pt-16 pb-12 text-xs border-t border-white/5 mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
-        <!-- Top Row: Clean Headline & Action CTA (Exact Carenest Header) -->
+        <!-- Top Row: Clean Headline & Action CTA -->
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-12 border-b border-white/10">
             <div class="space-y-1.5 max-w-xl">
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -11,16 +11,23 @@
                     Your contribution directly provides food packs, healthcare checks, and tech scholarships for grassroots families in Ikeja and across Lagos State.
                 </p>
             </div>
-            <a href="{{ route('donate') }}" class="inline-flex items-center justify-between sm:justify-start w-full sm:w-auto gap-2 text-xs font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-3.5 rounded-full shadow-lg transition-all duration-200 group shrink-0">
-                <span>Donate Now</span>
-                <span class="w-5 h-5 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-[10px] font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-                    <i class="bi bi-arrow-up-right"></i>
-                </span>
-            </a>
+    
+            <!-- CTA Buttons Container -->
+            <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto shrink-0">
+                <a href="{{ route('programs.index') }}" class="inline-flex items-center justify-center w-full sm:w-auto gap-2 text-xs font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-3.5 rounded-full transition-all">
+                    <span>View Programs</span>
+                </a>
+                <a href="{{ route('donate') }}" class="inline-flex items-center justify-center w-full sm:w-auto gap-2 text-xs font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-3.5 rounded-full shadow-lg transition-all duration-200 group">
+                    <span>Donate Now</span>
+                    <span class="w-5 h-5 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-[10px] font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </a>
+            </div>
         </div>
 
         <!-- Middle Row: Footer Links Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 border-b border-white/10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-12 border-b border-white/10">
             
             <!-- Col 1: Brand & Contact Info -->
             <div class="lg:col-span-2 space-y-4">
@@ -28,7 +35,7 @@
                     <img src="{{ asset('images/lifextract-brand.jpg') }}" alt="Lifextract Foundation" class="h-14 w-auto rounded-xl object-contain border border-white/10">
                 </div>
                 <p class="text-slate-400 leading-relaxed pr-4 text-xs">
-                    Putting people before publicity. Empowering vulnerable elderly roadside traders, equipping youth with digital skills, providing free medical outreaches, and hosting raw, honest conversations through TALKSWITHMRDEE.
+                    Putting people before publicity. Empowering vulnerable elderly roadside traders, equipping youth with digital skills, and providing free medical outreaches for grassroots communities.
                 </p>
                 
                 <!-- Business Contact Info -->
@@ -81,51 +88,18 @@
                 </ul>
             </div>
 
-            <!-- Col 4: TalksWithMrDee -->
-            <div class="space-y-3">
-                <div class="space-y-1">
-                    <span class="text-[10px] font-black text-[#F3C63F] font-mono block">“TALK AM AS E BE!”</span>
-                    <h4 class="text-[#F3C63F] font-bold text-xs uppercase tracking-wider">TALKSWITHMRDEE</h4>
-                </div>
-                <ul class="space-y-2 text-slate-400">
-                    <li><a href="{{ route('podcast.index') }}" class="hover:text-[#F3C63F] transition">Podcast Episodes</a></li>
-                    <li><a href="{{ route('podcast.be-a-guest') }}" class="hover:text-[#F3C63F] transition">Be a Guest</a></li>
-                    <li><a href="{{ route('support.index') }}" class="hover:text-[#F3C63F] transition">Relationship Support</a></li>
-                    <li><a href="mailto:talkswithmrdee@gmail.com" class="hover:text-[#F3C63F] transition">talkswithmrdee@gmail.com</a></li>
-                </ul>
-
-                <!-- Podcast Social Media Channels -->
-                <div class="pt-2 border-t border-white/10">
-                    <span class="text-[10px] text-slate-400 block mb-2 font-medium">Follow The Podcast:</span>
-                    <div class="flex items-center gap-2">
-                        <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-white/5 hover:bg-red-600 hover:text-white flex items-center justify-center transition text-xs" title="TalksWithMrDee YouTube">
-                            <i class="bi bi-youtube"></i>
-                        </a>
-                        <a href="https://www.instagram.com/talks_with_mrdee?stkn=bGtlMGdkMWJjcGh6" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-white/5 hover:bg-pink-600 hover:text-white flex items-center justify-center transition text-xs" title="TalksWithMrDee Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@talkswithmrdee?_r=1&_t=ZN-9A3kfMF36Zi" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-white/5 hover:bg-black hover:text-white flex items-center justify-center transition text-xs" title="TalksWithMrDee TikTok">
-                            <i class="bi bi-tiktok"></i>
-                        </a>
-                        <a href="https://x.com/TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-white/5 hover:bg-[#F3C63F] hover:text-[#181A20] flex items-center justify-center transition text-xs" title="TalksWithMrDee X">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
         <!-- Bottom Row: Huge Brand Name & Copyright (Exact Carenest Footer) -->
         <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
             <div class="flex flex-col sm:flex-row items-center sm:items-baseline gap-2 sm:gap-4 text-center sm:text-left">
                 <span class="text-2xl sm:text-3xl font-black text-white tracking-tight">Lifextract</span>
-                <p>&copy; {{ date('Y') }} Lifextract Humanitarian Foundation & TALKSWITHMRDEE. All rights reserved.</p>
+                <p>&copy; {{ date('Y') }} Lifextract Humanitarian Foundation. All rights reserved.</p>
             </div>
             <div class="flex items-center gap-1.5 text-xs text-slate-400">
                 <span>Crafted with</span>
                 <i class="bi bi-heart-fill text-rose-500 text-[11px]"></i>
-                <span>• Website by <strong class="text-slate-200 font-bold hover:text-[#F3C63F] transition">Impact Dev</strong></span>
+                <span>• Website by <a href="https://theimpactdev.com" target="_blank" class="text-slate-200 font-bold hover:text-[#F3C63F] transition">Impact Dev</a></span>
             </div>
         </div>
 

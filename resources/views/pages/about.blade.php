@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot:title>About Us — Lifextract Humanitarian Foundation & TalksWithMrDee</x-slot:title>
+    <x-slot:title>About Us — Lifextract Humanitarian Foundation</x-slot:title>
 
     <!-- ========================================================= -->
     <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
@@ -20,7 +20,7 @@
                     </h1>
 
                     <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-                        Lifextract Humanitarian Foundation is dedicated to transforming grassroots communities across Lagos, Nigeria. We bridge essential physical aid with emotional clarity through our multimedia storytelling platform, <strong class="text-[#F3C63F] font-semibold">TALKSWITHMRDEE</strong>.
+                        Lifextract Humanitarian Foundation is dedicated to transforming grassroots communities across Lagos, Nigeria. We provide essential physical aid, healthcare, and digital empowerment to those who need it most.
                     </p>
                     
                     <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
@@ -40,7 +40,7 @@
                 <!-- Right: Visual Badge Showcase -->
                 <div class="lg:col-span-4 flex justify-center lg:justify-end">
                     <div class="relative p-3 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-md">
-                        <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee" class="w-40 h-40 sm:w-56 sm:h-56 rounded-2xl object-cover border border-[#F3C63F]/40 shadow-inner">
+                        <img src="{{ asset('images/lifextract-brand.jpg') }}" alt="Lifextract Foundation" class="w-40 h-40 sm:w-56 sm:h-56 rounded-2xl object-cover border border-[#F3C63F]/40 shadow-inner">
                         <div class="absolute -bottom-3 -right-3 bg-[#F3C63F] text-[#181A20] font-black text-[10px] uppercase px-3 py-1.5 rounded-full shadow-lg">
                             ★ Ikeja, Lagos
                         </div>
@@ -60,8 +60,8 @@
                     <span class="text-xs font-medium text-slate-400">Grassroots Focused</span>
                 </div>
                 <div class="space-y-1">
-                    <span class="text-3xl sm:text-4xl font-black text-[#F3C63F] block tracking-tight">Weekly</span>
-                    <span class="text-xs font-medium text-slate-400">Podcast Episodes</span>
+                    <span class="text-3xl sm:text-4xl font-black text-[#F3C63F] block tracking-tight">Active</span>
+                    <span class="text-xs font-medium text-slate-400">Community Programs</span>
                 </div>
                 <div class="space-y-1">
                     <span class="text-3xl sm:text-4xl font-black text-white block tracking-tight">Ikeja</span>
@@ -105,7 +105,7 @@
                     </div>
                     <h3 class="text-lg font-bold text-[#181A20]">Our Vision</h3>
                     <p class="text-xs text-slate-600 leading-relaxed flex-grow">
-                        To build a sustainable digital ecosystem combining grassroots impact with authentic storytelling and emotional guidance—where every vulnerable person finds opportunity, support, and dignity.
+                        To build a sustainable humanitarian ecosystem where every vulnerable person finds opportunity, support, and dignity.
                     </p>
                 </div>
 
@@ -177,89 +177,11 @@
                         <i class="bi bi-people"></i>
                     </div>
                     <h4 class="font-bold text-[#181A20] text-sm">Human Connection</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Bridging communities, donors, volunteers, and listeners into one family.</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Bridging communities, donors, and volunteers into one family.</p>
                 </div>
 
             </div>
 
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- 4. THE TWO WINGS: FOUNDATION & PODCAST                   -->
-    <!-- ========================================================= -->
-    <section class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left: Why TalksWithMrDee Exists (Span 6) -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="space-y-2">
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">/ Media & Community /</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#181A20] tracking-tight">
-                            Why TALKSWITHMRDEE Exists: <br>
-                            <span class="text-amber-600">“TALK AM AS E BE!”</span>
-                        </h2>
-                    </div>
-
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Humanitarian aid solves physical hunger and medical emergencies, but human beings also need emotional clarity, healthy relationships, and truthful conversations.
-                    </p>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Through TALKSWITHMRDEE, we unpack real-life challenges—dating, marriage, conflict, and personal growth—while connecting people to licensed therapists and peaceful family legal advisors.
-                    </p>
-
-                    <div class="pt-2">
-                        <a href="{{ route('podcast.index') }}" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-[#181A20] hover:bg-black px-6 py-3.5 rounded-full shadow transition group">
-                            <i class="bi bi-mic text-[#F3C63F]"></i>
-                            <span>Explore Podcast Hub</span>
-                            <span class="w-5 h-5 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center text-[10px] font-black group-hover:translate-x-0.5 transition-transform">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right: High-Contrast Ecosystem Card with Real 3D Emblem (Span 6) -->
-                <div class="lg:col-span-6">
-                    <div class="bg-[#181A20] text-white p-8 sm:p-10 rounded-3xl sm:rounded-[36px] border border-white/10 shadow-2xl space-y-8">
-                        <div class="flex items-center gap-4 border-b border-white/10 pb-6">
-                            <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee" class="w-16 h-16 rounded-2xl object-cover border-2 border-[#F3C63F] shadow-lg flex-shrink-0">
-                            <div>
-                                <h3 class="text-lg font-bold text-white">One Unified Ecosystem</h3>
-                                <p class="text-xs text-slate-400">Two wings uplifting vulnerable people</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-white/10 text-[#F3C63F] flex items-center justify-center text-lg flex-shrink-0">
-                                    <i class="bi bi-hand-thumbs-up"></i>
-                                </div>
-                                <div class="space-y-1">
-                                    <h4 class="text-sm font-bold text-white">LIFEXTRACT FOUNDATION</h4>
-                                    <p class="text-xs text-slate-400 leading-relaxed">
-                                        Grassroots direct aid: food packs for roadside grandmothers, youth tech bootcamps, and emergency maternity bill relief.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-white/10 text-[#F3C63F] flex items-center justify-center text-lg flex-shrink-0">
-                                    <i class="bi bi-chat-quote"></i>
-                                </div>
-                                <div class="space-y-1">
-                                    <h4 class="text-sm font-bold text-white">TALKSWITHMRDEE</h4>
-                                    <p class="text-xs text-slate-400 leading-relaxed">
-                                        The storytelling platform: raw conversations, intentional relationship connection, and certified professional therapy referrals.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 

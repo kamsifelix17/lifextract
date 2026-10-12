@@ -14,9 +14,7 @@
             <a href="{{ route('home') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('home') ? 'text-[#181A20] font-bold' : '' }}">Home</a>
             <a href="{{ route('about') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('about') ? 'text-[#181A20] font-bold' : '' }}">About Us</a>
             <a href="{{ route('programs.index') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('programs.*') ? 'text-[#181A20] font-bold' : '' }}">Programs</a>
-            <a href="{{ route('podcast.index') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('podcast.*') ? 'text-[#181A20] font-bold' : '' }}">Podcast</a>
             <a href="{{ route('impact') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('impact') ? 'text-[#181A20] font-bold' : '' }}">Impact</a>
-            <a href="{{ route('support.index') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('support.*') ? 'text-[#181A20] font-bold' : '' }}">Support</a>
             <a href="{{ route('contact') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('contact') ? 'text-[#181A20] font-bold' : '' }}">Contact</a>
         </nav>
 
@@ -55,18 +53,8 @@
             <span>Programs</span>
             <i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
-        <a href="{{ route('podcast.index') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-bold {{ request()->routeIs('podcast.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-[#181A20] hover:bg-slate-50' }}">
-            <span class="flex items-center gap-2">
-                <i class="bi bi-mic text-[#F3C63F]"></i> TalksWithMrDee Podcast
-            </span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
-        </a>
         <a href="{{ route('impact') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('impact') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
             <span>Our Impact</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
-        </a>
-        <a href="{{ route('support.index') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('support.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
-            <span>Relationship Support & Referrals</span>
             <i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
         <a href="{{ route('volunteer.create') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('volunteer.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">

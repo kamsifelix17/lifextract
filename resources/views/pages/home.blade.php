@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        Lifextract Humanitarian Foundation & TalksWithMrDee — Hope, Empowerment & Authentic Conversations
+        Lifextract Humanitarian Foundation — Hope, Empowerment & Community Impact
     </x-slot:title>
 
     <!-- ========================================================= -->
@@ -19,7 +19,7 @@
                     </h1>
 
                     <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
-                        Lifextract is a grassroots humanitarian foundation committed to supporting elderly roadside women, youth tech empowerment, free healthcare, and honest conversations through <strong class="text-[#F3C63F]">TALKSWITHMRDEE</strong>.
+                        Lifextract is a grassroots humanitarian foundation committed to supporting elderly roadside women, youth tech empowerment, and free healthcare.
                     </p>
 
                     <!-- Carenest Action Button with Yellow Arrow -->
@@ -29,11 +29,6 @@
                             <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                 <i class="bi bi-arrow-up-right"></i>
                             </span>
-                        </a>
-
-                        <a href="{{ route('podcast.index') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-5 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
-                            <i class="bi bi-mic text-amber-400"></i>
-                            <span>Explore Podcast</span>
                         </a>
                     </div>
 
@@ -55,21 +50,10 @@
 
                 </div>
 
-                <!-- Right Column: Hero Image with Floating Testimonial Card (Exact Carenest Feature) -->
+                <!-- Right Column: Hero Image -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-800 aspect-[4/3] sm:aspect-[4/3]">
                         <img src="{{ asset('images/lifextract-hero-outreach.jpg') }}" alt="Lifextract Humanitarian Outreach in Lagos" class="w-full h-full object-cover">
-                        
-                        <!-- Floating Testimonial Pill (from Carenest) -->
-                        <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-xs bg-[#181A20]/90 backdrop-blur-md border border-white/15 p-3 sm:p-3.5 rounded-2xl shadow-xl text-left flex items-start gap-3">
-                            <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="Mr Dee" class="w-9 h-9 rounded-full object-cover border border-[#F3C63F] shrink-0">
-                            <div>
-                                <p class="text-[11px] text-slate-200 leading-tight">
-                                    “Putting people before publicity. Giving every voice dignity.”
-                                </p>
-                                <span class="text-[9px] font-bold text-[#F3C63F] uppercase tracking-wider block mt-1">TalksWithMrDee • Lagos</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -84,7 +68,6 @@
     <section class="bg-[#F3C63F] text-[#181A20] font-black text-xs uppercase tracking-wider py-4 overflow-hidden border-y border-amber-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-center sm:justify-between gap-y-3 gap-x-6">
             <span class="flex items-center gap-2">// LIFEXTRACT FOUNDATION</span>
-            <span class="flex items-center gap-1.5"><i class="bi bi-star-fill text-[10px]"></i> TALKSWITHMRDEE</span>
             <span class="flex items-center gap-2">// HUMANITARIAN SERVICE</span>
             <span class="flex items-center gap-1.5"><i class="bi bi-star-fill text-[10px]"></i> YOUTH EMPOWERMENT</span>
             <span class="flex items-center gap-2">// ELDERLY CARE</span>
@@ -137,7 +120,7 @@
                     <span class="text-4xl font-black text-[#181A20] block font-mono">04</span>
                     <h3 class="text-base font-bold text-[#181A20]">Measure Impact & Updates</h3>
                     <p class="text-xs text-slate-500 leading-relaxed">
-                        We track verified results, publish transparent reports, and share raw beneficiary stories on TALKSWITHMRDEE.
+                        We track verified results, publish transparent reports, and share authentic beneficiary stories.
                     </p>
                 </div>
 
@@ -197,7 +180,7 @@
                         <div class="bg-white p-5 sm:p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-1">
                             <span class="text-3xl sm:text-4xl font-black text-[#181A20] block">{{ $programsCount }}+</span>
                             <span class="text-xs font-bold text-[#181A20]">Active Programs</span>
-                            <p class="text-[11px] text-slate-500">Elderly care, youth skills, health aid, and podcasting.</p>
+                            <p class="text-[11px] text-slate-500">Elderly care, youth skills, and health aid.</p>
                         </div>
                     </div>
                 </div>
@@ -209,8 +192,8 @@
             function switchAboutTab(tabName) {
                 const statements = {
                     mission: "We are a non-profit organization dedicated to supporting individuals and families in need through care, education, and community-based programs. Our work focuses on creating sustainable pathways where people can thrive with confidence and dignity.",
-                    vision: "To build a sustainable digital and humanitarian ecosystem combining grassroots impact with authentic storytelling and emotional guidance—where every vulnerable person finds opportunity, support, and dignity.",
-                    values: "Rooted in authenticity, compassion, professionalism, and transparency, we put people before publicity—fostering genuine human connections and verifiable community impact."
+                    vision: "To build a sustainable humanitarian ecosystem combining grassroots impact with authentic support—where every vulnerable person finds opportunity and dignity.",
+                    values: "Rooted in authenticity, compassion, professionalism, and transparency, we put people before publicity—fostering verifiable community impact."
                 };
 
                 const tabs = ['mission', 'vision', 'values'];
@@ -338,136 +321,7 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 6. TALKSWITHMRDEE PODCAST SPOTLIGHT (Carenest Dark Hub)   -->
-    <!-- ========================================================= -->
-    <section class="py-24 bg-[#181A20] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-            
-            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 border-b border-white/10 pb-10">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-                    <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee Gold Emblem" class="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-[#F3C63F] shadow-2xl shrink-0">
-                    <div class="space-y-1.5">
-                        <span class="text-[11px] sm:text-xs font-black text-[#F3C63F] uppercase tracking-widest font-mono block break-words">LISTEN • COMMENT • SHARE — “TALK AM AS E BE!”</span>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-                            TALKSWITHMRDEE Media Hub
-                        </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 max-w-xl">
-                            Real conversations on relationships, marriage challenges, and life advice—with direct referral access to licensed therapists and family lawyers based in Ikeja, Lagos.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
-                    <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-red-600 hover:bg-red-700 px-4 py-2.5 rounded-full transition shadow">
-                        <i class="bi bi-youtube"></i>
-                        <span>YouTube</span>
-                    </a>
-                    <a href="{{ route('podcast.be-a-guest') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2.5 rounded-full transition">
-                        <span>Be a Guest</span>
-                        <i class="bi bi-arrow-up-right text-[10px]"></i>
-                    </a>
-                    <a href="{{ route('podcast.index') }}" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-5 py-2.5 rounded-full transition shadow">
-                        <span>All Episodes</span>
-                        <i class="bi bi-arrow-up-right text-[10px]"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Podcast Episode Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                @forelse($latestEpisodes as $episode)
-                    <x-episode-card :episode="$episode" />
-                @empty
-                    <div class="col-span-3 text-center py-12 bg-white/5 rounded-3xl border border-white/10">
-                        <p class="text-slate-400 text-xs">No podcast episodes found yet.</p>
-                    </div>
-                @endforelse
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- 7. CONFIDENTIAL SUPPORT & REFERRAL PATHWAYS              -->
-    <!-- ========================================================= -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-            
-            <div class="text-center max-w-xl mx-auto space-y-2">
-                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">/ Support /</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#181A20] tracking-tight">
-                    Professional Life & Relationship Pathways
-                </h2>
-                <p class="text-xs text-slate-500">
-                    Connecting individuals and couples to qualified therapists, marriage counselors, and legal professionals.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="p-6 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 hover:border-slate-400 transition space-y-3 flex flex-col">
-                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg">
-                        <i class="bi bi-heart"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-[#181A20]">Intentional Partner Connection</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed flex-grow">
-                        Values-aligned matchmaking for individuals seeking serious and purposeful relationships.
-                    </p>
-                    <a href="{{ route('support.index') }}" class="text-xs font-bold text-[#181A20] hover:underline pt-2 flex items-center gap-1">
-                        <span>Get Connected</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="p-6 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 hover:border-slate-400 transition space-y-3 flex flex-col">
-                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg">
-                        <i class="bi bi-chat-heart"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-[#181A20]">Marriage & Conflict Counseling</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed flex-grow">
-                        Work through communication breakdowns and explore healthy reconciliation with certified therapists.
-                    </p>
-                    <a href="{{ route('support.index') }}" class="text-xs font-bold text-[#181A20] hover:underline pt-2 flex items-center gap-1">
-                        <span>Request Counseling</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="p-6 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 hover:border-slate-400 transition space-y-3 flex flex-col">
-                    <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-lg">
-                        <i class="bi bi-shield-check"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-[#181A20]">Exiting Unhealthy Relationships</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed flex-grow">
-                        Safe, non-judgmental professional pathways to process trauma and plan responsible next steps.
-                    </p>
-                    <a href="{{ route('support.index') }}" class="text-xs font-bold text-[#181A20] hover:underline pt-2 flex items-center gap-1">
-                        <span>Seek Safe Guidance</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="p-6 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 hover:border-slate-400 transition space-y-3 flex flex-col">
-                    <div class="w-10 h-10 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center text-lg">
-                        <i class="bi bi-file-earmark-text"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-[#181A20]">Peaceful Legal Separation</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed flex-grow">
-                        Access qualified family lawyers for dignified, peaceful legal representation without hostility.
-                    </p>
-                    <a href="{{ route('support.index') }}" class="text-xs font-bold text-[#181A20] hover:underline pt-2 flex items-center gap-1">
-                        <span>Consult Lawyers</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- 8. WHAT SUPPORTERS SAY (Testimonials & Community Trust)  -->
+    <!-- 6. WHAT SUPPORTERS SAY (Testimonials & Community Trust)  -->
     <!-- ========================================================= -->
     <section class="py-14 sm:py-20 bg-[#FBFBFC] border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
@@ -548,7 +402,7 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 9. FREQUENTLY ASKED QUESTIONS (Carenest Accordion)        -->
+    <!-- 7. FREQUENTLY ASKED QUESTIONS (Carenest Accordion)        -->
     <!-- ========================================================= -->
     <section class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -568,16 +422,6 @@
                     </summary>
                     <p class="text-xs text-slate-600 mt-3 leading-relaxed">
                         100% of outreach donations go directly into funding elderly food packs, medical testing kits, medications, and digital skills bootcamp access for grassroots beneficiaries.
-                    </p>
-                </details>
-
-                <details class="group bg-[#FBFBFC] rounded-2xl border border-slate-200/80 p-5 cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-sm text-[#181A20] list-none">
-                        <span>Are relationship and therapy requests strictly confidential?</span>
-                        <span class="transition group-open:rotate-45 text-slate-400 text-sm"><i class="bi bi-plus-lg"></i></span>
-                    </summary>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-                        Yes. All counseling, matchmaking, and legal support referrals through TALKSWITHMRDEE are handled with strict privacy safeguards and connected with verified licensed practitioners.
                     </p>
                 </details>
 

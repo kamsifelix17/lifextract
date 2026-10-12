@@ -73,8 +73,8 @@
                     <span class="text-xs font-medium text-slate-400">Field Video & Photo Proof</span>
                 </div>
                 <div class="space-y-1">
-                    <span class="text-2xl sm:text-3xl font-black text-white block tracking-tight">Media</span>
-                    <span class="text-xs font-medium text-slate-400">Podcast Brand Synergy</span>
+                    <span class="text-2xl sm:text-3xl font-black text-white block tracking-tight">Outreach</span>
+                    <span class="text-xs font-medium text-slate-400">Joint Grassroots Campaigns</span>
                 </div>
             </div>
 
@@ -132,14 +132,14 @@
                     </p>
                 </div>
 
-                <!-- Pillar 4: Media & Podcast Sponsorship -->
+                <!-- Pillar 4: Grassroots Campaigns -->
                 <div class="p-6 rounded-3xl bg-[#FBFBFC] border border-slate-200/80 space-y-3">
                     <span class="w-10 h-10 rounded-2xl bg-[#181A20] text-emerald-400 flex items-center justify-center font-bold text-lg">
-                        <i class="bi bi-mic-fill"></i>
+                        <i class="bi bi-megaphone-fill"></i>
                     </span>
-                    <h3 class="text-base font-bold text-[#181A20]">4. TALKSWITHMRDEE Media</h3>
+                    <h3 class="text-base font-bold text-[#181A20]">4. Grassroots Campaigns</h3>
                     <p class="text-xs text-slate-500 leading-relaxed">
-                        Align your brand with authentic conversations on mental health, relationships, and societal change on our rapidly growing podcast.
+                        Co-host large-scale community interventions, food drives, and empowerment events with joint branding and media documentation.
                     </p>
                 </div>
 
@@ -210,7 +210,7 @@
                         <label class="text-xs font-bold text-[#181A20] uppercase tracking-wider flex items-center gap-1.5">
                             <i class="bi bi-chat-left-text text-slate-400"></i> Partnership Proposal & Scope *
                         </label>
-                        <textarea name="details" rows="5" required placeholder="Describe your intended collaboration (e.g. CSR outreach sponsorship, in-kind medical supplies, vocational equipment donation, TALKSWITHMRDEE podcast sponsorship)..." class="w-full text-sm p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition"></textarea>
+                        <textarea name="details" rows="5" required placeholder="Describe your intended collaboration (e.g. CSR outreach sponsorship, in-kind medical supplies, vocational equipment donation, joint community campaign)..." class="w-full text-sm p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] focus:bg-white transition"></textarea>
                     </div>
 
                     <!-- Direct Office Contact Note -->

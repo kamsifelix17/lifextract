@@ -31,7 +31,7 @@
                             </span>
                         </a>
 
-                        <a href="{{ route('support.index') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
+                        <a href="{{ route('contact') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
                             <i class="bi bi-heart-half text-[#F3C63F]"></i>
                             <span>Nominate / Request Aid</span>
                         </a>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="space-y-1">
                     <span class="text-2xl sm:text-3xl font-black text-white block tracking-tight">Documented</span>
-                    <span class="text-xs font-medium text-slate-400">On TalksWithMrDee</span>
+                    <span class="text-xs font-medium text-slate-400">Transparently Verified</span>
                 </div>
             </div>
 
@@ -168,7 +168,7 @@
                     </div>
 
                     <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-                        <a href="{{ route('support.index') }}" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
+                        <a href="{{ route('contact') }}" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
                             <span>Request / Nominate Support</span>
                             <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                                 <i class="bi bi-arrow-up-right"></i>
