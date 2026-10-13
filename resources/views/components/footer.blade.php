@@ -74,6 +74,12 @@
                     <li><a href="{{ route('impact') }}" class="hover:text-white transition">Our Impact</a></li>
                     <li><a href="{{ route('contact') }}" class="hover:text-white transition">Contact Us</a></li>
                     <li><a href="{{ route('donate') }}" class="hover:text-white transition">Donate Now</a></li>
+                    <!-- Added Podcast Link Here -->
+                    <li class="pt-2 mt-2 border-t border-white/10">
+                        <a href="{{ route('podcast.index') }}" class="text-[#F3C63F] font-semibold hover:text-white transition flex items-center gap-1.5">
+                            <i class="bi bi-mic"></i> TalksWithMrDee
+                        </a>
+                    </li>
                 </ul>
             </div>
 

@@ -1,4 +1,4 @@
-<x-layout>
+<x-podcast-layout>
     <x-slot:title>Episode #{{ $episode->episode_number }}: {{ $episode->title }} — TALKSWITHMRDEE</x-slot:title>
 
     <article class="py-10 bg-slate-50 min-h-screen">
@@ -221,4 +221,4 @@
 
         </div>
     </article>
-</x-layout>
+</x-podcast-layout>

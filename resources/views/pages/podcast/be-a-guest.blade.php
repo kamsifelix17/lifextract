@@ -1,4 +1,4 @@
-<x-layout>
+<x-podcast-layout>
     <x-slot:title>Be a Guest / Share Your Story — TALKSWITHMRDEE Podcast</x-slot:title>
 
     <!-- ========================================================= -->
@@ -115,4 +115,4 @@
 
         </div>
     </section>
-</x-layout>
+</x-podcast-layout>

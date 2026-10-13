@@ -1,4 +1,4 @@
-<x-layout>
+<x-podcast-layout>
     <x-slot:title>TALKSWITHMRDEE Podcast — Real Conversations, Relationships & Healing</x-slot:title>
 
     <!-- ========================================================= -->
@@ -6,17 +6,16 @@
     <!-- ========================================================= -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
         <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-6 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-                
-                <!-- Left: Title & Mission -->
+
                 <div class="lg:col-span-8 space-y-6 text-left">
                     <div class="flex flex-wrap items-center gap-3">
                         <span class="inline-block text-xs font-bold text-[#F3C63F] uppercase tracking-widest bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
                             / Media & Storytelling Platform /
                         </span>
                         <span class="inline-flex items-center gap-1.5 text-xs font-black text-[#F3C63F] font-mono tracking-wider bg-black/40 px-3 py-1 rounded-full border border-[#F3C63F]/30">
-                            <i class="bi bi-mic-fill"></i> LISTEN • COMMENT • SHARE — “TALK AM AS E BE!”
+                            <i class="bi bi-mic-fill"></i> LISTEN • COMMENT • SHARE
                         </span>
                     </div>
 
@@ -27,7 +26,7 @@
                     <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
                         Hosted by Mr. Dee under the Lifextract umbrella in Ikeja, Lagos, <strong>TALKSWITHMRDEE</strong> strips away pretense to examine raw relationship dilemmas, emotional trauma, family dynamics, and mental wellness with licensed counselors and everyday survivors.
                     </p>
-                    
+
                     <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                         <a href="#episodes-feed" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
                             <span>Explore Episodes</span>
@@ -42,25 +41,15 @@
                         </a>
                     </div>
 
-                    <!-- Official Broadcast Social Handles -->
-                    <div class="pt-2 flex items-center gap-3 text-xs text-slate-400">
-                        <span class="text-slate-400 font-semibold">Stream & Follow:</span>
-                        <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-red-600 hover:text-white flex items-center justify-center transition" title="YouTube Channel">
-                            <i class="bi bi-youtube"></i>
-                        </a>
-                        <a href="https://www.instagram.com/talks_with_mrdee?stkn=bGtlMGdkMWJjcGh6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-pink-600 hover:text-white flex items-center justify-center transition" title="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@talkswithmrdee?_r=1&_t=ZN-9A3kfMF36Zi" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-black hover:text-white flex items-center justify-center transition" title="TikTok">
-                            <i class="bi bi-tiktok"></i>
-                        </a>
-                        <a href="https://x.com/TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/5 hover:bg-[#F3C63F] hover:text-[#181A20] flex items-center justify-center transition" title="X (Twitter)">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
+                    <div class="pt-2 flex flex-wrap items-center gap-3 text-xs text-slate-400">
+                        <span class="text-slate-400 font-semibold w-full sm:w-auto">Stream & Follow:</span>
+                        <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-red-600 hover:text-white flex items-center justify-center transition shadow-sm" title="YouTube Channel"><i class="bi bi-youtube text-sm"></i></a>
+                        <a href="https://www.instagram.com/talks_with_mrdee?stkn=bGtlMGdkMWJjcGh6" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-pink-600 hover:text-white flex items-center justify-center transition shadow-sm" title="Instagram"><i class="bi bi-instagram text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@talkswithmrdee?_r=1&_t=ZN-9A3kfMF36Zi" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition shadow-sm" title="TikTok"><i class="bi bi-tiktok text-sm"></i></a>
+                        <a href="https://x.com/TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#F3C63F] hover:text-[#181A20] flex items-center justify-center transition shadow-sm" title="X (Twitter)"><i class="bi bi-twitter-x text-sm"></i></a>
                     </div>
                 </div>
 
-                <!-- Right: Visual Emblem Showcase -->
                 <div class="lg:col-span-4 flex justify-center lg:justify-end">
                     <div class="relative p-3 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-md">
                         <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee Gold Emblem" class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl object-cover border border-[#F3C63F]/40 shadow-inner">
@@ -96,11 +85,11 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 2. EPISODES FEED & SEARCH                                 -->
+    <!-- 2. EPISODES FEED & SEARCH (Light Background)              -->
     <!-- ========================================================= -->
     <section id="episodes-feed" class="py-12 bg-slate-50 min-h-screen scroll-mt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-            
+
             <!-- Search & Feed Header -->
             <div class="flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-slate-200/80 pb-6">
                 <div>
@@ -158,11 +147,11 @@
             @endif
 
             <!-- ========================================================= -->
-            <!-- 3. NEED COUNSELING & GUEST PITCH BANNER (Carenest Style)   -->
+            <!-- 3. NEED COUNSELING & GUEST PITCH BANNER (Dark Card)       -->
             <!-- ========================================================= -->
             <div class="mt-16 bg-[#181A20] text-white rounded-3xl sm:rounded-[36px] p-8 sm:p-12 relative overflow-hidden shadow-xl border border-white/10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    
+
                     <div class="lg:col-span-8 space-y-4">
                         <span class="inline-block text-xs font-bold text-[#F3C63F] uppercase tracking-wider bg-white/5 px-3.5 py-1.5 rounded-full border border-white/10">
                             / Confidential Emotional Support /
@@ -189,7 +178,7 @@
                         </a>
 
                         <a href="{{ route('podcast.be-a-guest') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
-                            <i class="bi bi-mic-fill text-[#F3C63F]"></i>
+                            <i class="bi bi-megaphone-fill text-[#F3C63F]"></i>
                             <span>Pitch to Be on the Show</span>
                         </a>
                     </div>
@@ -199,4 +188,4 @@
 
         </div>
     </section>
-</x-layout>
+</x-podcast-layout>

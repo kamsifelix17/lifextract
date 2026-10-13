@@ -9,13 +9,18 @@
             <span class="font-extrabold text-sm sm:text-base tracking-tight text-[#181A20] leading-tight">Lifextract</span>
         </a>
 
-        <!-- Center: Clean Navigation Links with Generous Spacing -->
+        <!-- Center: Navigation Links -->
         <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold text-slate-600">
             <a href="{{ route('home') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('home') ? 'text-[#181A20] font-bold' : '' }}">Home</a>
             <a href="{{ route('about') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('about') ? 'text-[#181A20] font-bold' : '' }}">About Us</a>
             <a href="{{ route('programs.index') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('programs.*') ? 'text-[#181A20] font-bold' : '' }}">Programs</a>
             <a href="{{ route('impact') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('impact') ? 'text-[#181A20] font-bold' : '' }}">Impact</a>
             <a href="{{ route('contact') }}" class="hover:text-[#181A20] transition {{ request()->routeIs('contact') ? 'text-[#181A20] font-bold' : '' }}">Contact</a>
+            
+            <!-- Distinct Podcast Link -->
+            <a href="{{ route('podcast.index') }}" class="flex items-center gap-1.5 text-amber-600 hover:text-[#181A20] transition {{ request()->routeIs('podcast.*') ? 'text-[#181A20] font-bold' : '' }}">
+                <i class="bi bi-mic-fill"></i> TalksWithMrDee
+            </a>
         </nav>
 
         <!-- Right: Action Button & Mobile Toggle -->
@@ -27,12 +32,11 @@
                 </span>
             </a>
 
-            <!-- Mobile Menu Toggle Button -->
+            <!-- Mobile Menu Toggle -->
             <button type="button" 
                     id="mobile-nav-toggle"
                     onclick="const menu = document.getElementById('mobile-menu'); const icon = this.querySelector('i'); menu.classList.toggle('hidden'); icon.classList.toggle('bi-list'); icon.classList.toggle('bi-x-lg');" 
-                    class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition focus:outline-none"
-                    aria-label="Toggle navigation menu">
+                    class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition focus:outline-none">
                 <i class="bi bi-list text-2xl leading-none"></i>
             </button>
         </div>
@@ -42,38 +46,31 @@
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden lg:hidden max-w-7xl mx-auto mt-2 bg-white rounded-3xl border border-slate-200 p-4 space-y-1 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
         <a href="{{ route('home') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-bold {{ request()->routeIs('home') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-800 hover:bg-slate-50' }}">
-            <span>Home</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
+            <span>Home</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
         <a href="{{ route('about') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('about') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
-            <span>About Us</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
+            <span>About Us</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
         <a href="{{ route('programs.index') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('programs.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
-            <span>Programs</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
+            <span>Programs</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
         <a href="{{ route('impact') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('impact') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
-            <span>Our Impact</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
+            <span>Our Impact</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
-        <a href="{{ route('volunteer.create') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('volunteer.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
-            <span>Volunteer</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
+        
+        <!-- Distinct Mobile Podcast Link -->
+        <a href="{{ route('podcast.index') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-bold bg-amber-50 text-amber-700 hover:bg-amber-100 mt-2 mb-2 border border-amber-100">
+            <span class="flex items-center gap-2"><i class="bi bi-mic-fill"></i> TalksWithMrDee</span>
+            <i class="bi bi-arrow-up-right text-xs"></i>
         </a>
-        <a href="{{ route('partner.create') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('partner.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
-            <span>Partner With Us</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
-        </a>
+
         <a href="{{ route('contact') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('contact') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
-            <span>Contact Us</span>
-            <i class="bi bi-chevron-right text-xs opacity-50"></i>
+            <span>Contact Us</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
 
         <div class="pt-3 border-t border-slate-100 px-1">
             <a href="{{ route('donate') }}" class="flex items-center justify-between py-3 px-5 rounded-2xl bg-[#F3C63F] text-[#181A20] font-black text-xs uppercase tracking-wider shadow">
-                <span>Donate to a Program</span>
-                <i class="bi bi-arrow-up-right"></i>
+                <span>Donate to a Program</span><i class="bi bi-arrow-up-right"></i>
             </a>
         </div>
     </div>
