@@ -1,191 +1,395 @@
 <x-podcast-layout>
-    <x-slot:title>TALKSWITHMRDEE Podcast — Real Conversations, Relationships & Healing</x-slot:title>
+    <x-slot:title>TalksWithMrDee — Talk and Listen</x-slot:title>
 
     <!-- ========================================================= -->
-    <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
+    <!-- GLOBAL SUCCESS TOAST MESSAGE (Timed)                      -->
     <!-- ========================================================= -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-6 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl border border-white/10">
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-
-                <div class="lg:col-span-8 space-y-6 text-left">
-                    <div class="flex flex-wrap items-center gap-3">
-                        <span class="inline-block text-xs font-bold text-[#F3C63F] uppercase tracking-widest bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
-                            / Media & Storytelling Platform /
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-black text-[#F3C63F] font-mono tracking-wider bg-black/40 px-3 py-1 rounded-full border border-[#F3C63F]/30">
-                            <i class="bi bi-mic-fill"></i> LISTEN • COMMENT • SHARE
-                        </span>
-                    </div>
-
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
-                        Honest Conversations on Life, Love & Healing
-                    </h1>
-
-                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
-                        Hosted by Mr. Dee under the Lifextract umbrella in Ikeja, Lagos, <strong>TALKSWITHMRDEE</strong> strips away pretense to examine raw relationship dilemmas, emotional trauma, family dynamics, and mental wellness with licensed counselors and everyday survivors.
-                    </p>
-
-                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                        <a href="#episodes-feed" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-7 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
-                            <span>Explore Episodes</span>
-                            <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-                                <i class="bi bi-arrow-down"></i>
-                            </span>
-                        </a>
-
-                        <a href="{{ route('podcast.be-a-guest') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
-                            <i class="bi bi-megaphone-fill text-[#F3C63F]"></i>
-                            <span>Pitch to Be a Guest</span>
-                        </a>
-                    </div>
-
-                    <div class="pt-2 flex flex-wrap items-center gap-3 text-xs text-slate-400">
-                        <span class="text-slate-400 font-semibold w-full sm:w-auto">Stream & Follow:</span>
-                        <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-red-600 hover:text-white flex items-center justify-center transition shadow-sm" title="YouTube Channel"><i class="bi bi-youtube text-sm"></i></a>
-                        <a href="https://www.instagram.com/talks_with_mrdee?stkn=bGtlMGdkMWJjcGh6" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-pink-600 hover:text-white flex items-center justify-center transition shadow-sm" title="Instagram"><i class="bi bi-instagram text-sm"></i></a>
-                        <a href="https://www.tiktok.com/@talkswithmrdee?_r=1&_t=ZN-9A3kfMF36Zi" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition shadow-sm" title="TikTok"><i class="bi bi-tiktok text-sm"></i></a>
-                        <a href="https://x.com/TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#F3C63F] hover:text-[#181A20] flex items-center justify-center transition shadow-sm" title="X (Twitter)"><i class="bi bi-twitter-x text-sm"></i></a>
-                    </div>
+    @if(session('success'))
+        <div id="toast-success" class="fixed top-24 right-4 sm:right-8 z-[100] transition-opacity duration-500 ease-in-out">
+            <div class="bg-white border-l-4 border-[#F3C63F] p-4 rounded-xl shadow-2xl flex items-start gap-3 min-w-[300px]">
+                <i class="bi bi-check-circle-fill text-[#F3C63F] text-xl"></i>
+                <div class="flex-1">
+                    <h4 class="text-sm font-black text-[#181A20]">Success</h4>
+                    <p class="text-xs font-semibold text-slate-600 mt-0.5">{{ session('success') }}</p>
                 </div>
+                <button onclick="closeToast()" class="text-slate-400 hover:text-slate-600 transition">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+        </div>
+        <script>
+            function closeToast() {
+                const toast = document.getElementById('toast-success');
+                if (toast) {
+                    toast.style.opacity = '0';
+                    setTimeout(() => toast.remove(), 500);
+                }
+            }
+            // Auto-hide after 5 seconds
+            setTimeout(closeToast, 5000);
+        </script>
+    @endif
 
-                <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                    <div class="relative p-3 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-md">
-                        <img src="{{ asset('images/talkswithmrdee-emblem.jpg') }}" alt="TalksWithMrDee Gold Emblem" class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl object-cover border border-[#F3C63F]/40 shadow-inner">
-                        <div class="absolute -bottom-3 -right-3 bg-[#F3C63F] text-[#181A20] font-black text-[10px] uppercase px-3 py-1.5 rounded-full shadow-lg">
-                            ★ Official Podcast
-                        </div>
-                    </div>
-                </div>
-
+    <!-- ========================================================= -->
+    <!-- 1. PODCAST HERO & INTRO (With Faded Background)           -->
+    <!-- ========================================================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12 bg-slate-50">
+        <div class="bg-[#181A20] text-white rounded-3xl sm:rounded-[40px] p-6 sm:p-14 lg:p-20 relative overflow-hidden shadow-2xl border border-white/10 text-center min-h-[50vh] flex flex-col justify-center">
+            
+            <!-- Faded Background Image Overlay -->
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <img src="{{ asset('images/podcast-cover.jpg') }}" alt="Talks with Mr Dee Background" class="w-full h-full object-cover opacity-10 mix-blend-overlay">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#181A20] via-transparent to-transparent"></div>
             </div>
 
-            <!-- Stats Bar -->
-            <div class="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
-                <div class="space-y-1">
-                    <span class="text-2xl sm:text-3xl font-black text-white block tracking-tight">Weekly</span>
-                    <span class="text-xs font-medium text-slate-400">New Releases</span>
+            <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+                <div class="w-20 h-20 mx-auto rounded-2xl bg-[#F3C63F] flex items-center justify-center text-[#181A20] text-4xl shadow-lg shadow-[#F3C63F]/20">
+                    <i class="bi bi-mic-fill"></i>
                 </div>
-                <div class="space-y-1">
-                    <span class="text-2xl sm:text-3xl font-black text-[#F3C63F] block tracking-tight">Verified</span>
-                    <span class="text-xs font-medium text-slate-400">Therapists & Experts</span>
-                </div>
-                <div class="space-y-1">
-                    <span class="text-2xl sm:text-3xl font-black text-white block tracking-tight">100% Raw</span>
-                    <span class="text-xs font-medium text-slate-400">No Scripts, Real Truth</span>
-                </div>
-                <div class="space-y-1">
-                    <span class="text-2xl sm:text-3xl font-black text-white block tracking-tight">Multi-Platform</span>
-                    <span class="text-xs font-medium text-slate-400">YouTube & Audio</span>
+                
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight uppercase font-mono text-[#F3C63F]">
+                    “TALK AM AS E BE!”
+                </h1>
+                
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed drop-shadow-md">
+                    <strong>Talk and Listen.</strong> Welcome to the premier platform for honest conversations about relationships, marriage, personal development, and navigating everyday life challenges. We provide a safe, respectful space to connect, learn, and grow.
+                </p>
+
+                <div class="pt-4 flex flex-wrap justify-center gap-3">
+                    <a href="#episodes" class="px-8 py-4 rounded-full bg-[#F3C63F] text-[#181A20] font-bold text-sm hover:bg-[#eab92d] transition shadow-lg">
+                        Listen Now
+                    </a>
+                    <a href="#matchmaking" class="px-8 py-4 rounded-full bg-white/10 text-white font-bold text-sm border border-white/20 hover:bg-white/20 backdrop-blur-sm transition">
+                        Tell Us Your Type
+                    </a>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- ========================================================= -->
-    <!-- 2. EPISODES FEED & SEARCH (Light Background)              -->
+    <!-- 2. HOST SECTION (With Featured Image & Socials)           -->
     <!-- ========================================================= -->
-    <section id="episodes-feed" class="py-12 bg-slate-50 min-h-screen scroll-mt-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-
-            <!-- Search & Feed Header -->
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-slate-200/80 pb-6">
-                <div>
-                    <span class="text-xs font-extrabold text-[#F3C63F] uppercase tracking-wider block">Browse Broadcasts</span>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-[#181A20] tracking-tight">Recent Podcast Episodes</h2>
+    <section id="host" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                
+                <!-- Circular Gold Frame (Mirrors the Layout Request) -->
+                <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-[#F3C63F] flex-shrink-0 shadow-xl relative group">
+                    <img src="{{ asset('images/podcast-cover.jpg') }}" alt="Talks With Mr Dee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
-
-                <!-- Sleek Search Form -->
-                <form action="{{ route('podcast.index') }}#episodes-feed" method="GET" class="w-full sm:w-auto flex items-center gap-2">
-                    <div class="relative w-full sm:w-72">
-                        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                            <i class="bi bi-search"></i>
-                        </span>
-                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search topics, guests..." class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#F3C63F] shadow-sm">
-                    </div>
-                    <button type="submit" class="px-5 py-2.5 rounded-full bg-[#181A20] hover:bg-black text-white font-bold text-xs transition flex-shrink-0">
-                        Search
-                    </button>
-                    @if(request('search'))
-                        <a href="{{ route('podcast.index') }}#episodes-feed" class="p-2.5 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs transition" title="Clear Search">
-                            <i class="bi bi-x-lg"></i>
+                
+                <div class="space-y-4 text-center md:text-left">
+                    <span class="text-[#F3C63F] text-xs font-black tracking-widest uppercase">/ The Host /</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-[#181A20]">Meet Mr. Dee</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed max-w-xl">
+                        A dedicated storyteller and relationship advocate, Mr. Dee bridges the gap between humanitarian empathy and everyday social realities. Through authentic dialogue, he unpacks the complexities of modern dating, family dynamics, and personal growth.
+                    </p>
+                    <div class="pt-2 flex gap-3 justify-center md:justify-start">
+                        <a href="https://www.instagram.com/talks_with_mrdee?stkn=bGtlMGdkMWJjcGh6" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#F3C63F] hover:text-[#181A20] transition shadow-sm">
+                            <i class="bi bi-instagram"></i>
                         </a>
-                    @endif
+                        <a href="https://x.com/TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-[#F3C63F] hover:text-[#181A20] transition shadow-sm">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 3. RECENT EPISODES (With Actual YT Link Prototypes)       -->
+    <!-- ========================================================= -->
+    <section id="episodes" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="flex items-end justify-between border-b border-slate-200 pb-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-[#181A20]">Latest Episodes</h2>
+                    <p class="text-xs text-slate-500 mt-1">A selection of our most recent conversations.</p>
+                </div>
+                <form action="{{ route('podcast.index') }}#episodes" method="GET" class="hidden sm:flex">
+                    <div class="relative">
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search episodes..." class="pl-10 pr-4 py-2 text-xs rounded-full border border-slate-200 bg-white focus:outline-none focus:border-[#F3C63F]">
+                        <i class="bi bi-search absolute left-4 top-2.5 text-slate-400 text-xs"></i>
+                    </div>
                 </form>
             </div>
 
-            <!-- Episode Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                @forelse($episodes as $episode)
-                    <x-episode-card :episode="$episode" />
-                @empty
-                    <div class="col-span-full text-center py-16 bg-white rounded-3xl border border-slate-200/80 shadow-sm p-8 space-y-4 max-w-xl mx-auto">
-                        <div class="w-16 h-16 mx-auto rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400 text-3xl">
-                            <i class="bi bi-mic-mute"></i>
-                        </div>
-                        <h3 class="text-lg font-extrabold text-[#181A20] tracking-tight">No Podcast Episodes Found</h3>
-                        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
-                            We couldn't find any episodes matching your search query. Try another keyword or browse all episodes.
-                        </p>
-                        <div class="pt-2">
-                            <a href="{{ route('podcast.index') }}#episodes-feed" class="inline-flex items-center gap-2 text-xs font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-3 rounded-full transition">
-                                <i class="bi bi-arrow-clockwise"></i>
-                                <span>Reset Search</span>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+                
+                @forelse($episodes ?? [] as $episode)
+                <div class="bg-[#181A20] rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#F3C63F]/50 transition duration-300 group flex flex-col">
+                    <div class="aspect-video bg-slate-800 relative">
+                        <img src="{{ $episode->thumbnail ?? asset('images/ep-placeholder.jpg') }}" alt="Episode Thumbnail" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <!-- Feasible YouTube Link Prototype -->
+                            <a href="{{ $episode->youtube_link ?? 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' }}" target="_blank" rel="noopener noreferrer" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="bi bi-play-fill text-xl sm:text-2xl ml-1"></i>
                             </a>
                         </div>
                     </div>
+                    <div class="p-3 sm:p-5 space-y-2 flex-grow">
+                        <span class="text-[9px] sm:text-[10px] font-bold text-[#F3C63F] tracking-wider uppercase">Ep. {{ $episode->episode_number }} • {{ \Carbon\Carbon::parse($episode->air_date)->format('M d, Y') }}</span>
+                        <h3 class="text-sm sm:text-base font-bold text-white leading-tight line-clamp-2">{{ $episode->title }}</h3>
+                        <p class="text-[10px] sm:text-xs text-slate-400 line-clamp-2 hidden sm:block">Guest: {{ $episode->guest_name }}</p>
+                    </div>
+                </div>
+                @empty
+                <!-- Fallback Hardcoded Episode -->
+                <div class="bg-[#181A20] rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#F3C63F]/50 transition duration-300 group flex flex-col">
+                    <div class="aspect-video bg-slate-800 relative">
+                        <img src="{{ asset('images/ep1.jpg') }}" alt="Episode Thumbnail" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <!-- Feasible YouTube Link Prototype -->
+                            <a href="https://www.youtube.com/@TALKSWITHMRDEE" target="_blank" rel="noopener noreferrer" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#F3C63F] text-[#181A20] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="bi bi-play-fill text-xl sm:text-2xl ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-3 sm:p-5 space-y-2">
+                        <span class="text-[9px] sm:text-[10px] font-bold text-[#F3C63F] tracking-wider uppercase">Ep. 42 • Oct 12, 2026</span>
+                        <h3 class="text-sm sm:text-base font-bold text-white leading-tight line-clamp-2">Navigating Financial Conflict in Marriage</h3>
+                        <p class="text-[10px] sm:text-xs text-slate-400 line-clamp-2 hidden sm:block">Guest: Dr. Sarah Okon.</p>
+                    </div>
+                </div>
                 @endforelse
+
             </div>
 
-            <!-- Pagination Links -->
-            @if($episodes->hasPages())
+            @if(isset($episodes) && $episodes->hasPages())
                 <div class="pt-6 flex justify-center">
                     {{ $episodes->withQueryString()->links() }}
                 </div>
             @endif
+        </div>
+    </section>
 
-            <!-- ========================================================= -->
-            <!-- 3. NEED COUNSELING & GUEST PITCH BANNER (Dark Card)       -->
-            <!-- ========================================================= -->
-            <div class="mt-16 bg-[#181A20] text-white rounded-3xl sm:rounded-[36px] p-8 sm:p-12 relative overflow-hidden shadow-xl border border-white/10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-                    <div class="lg:col-span-8 space-y-4">
-                        <span class="inline-block text-xs font-bold text-[#F3C63F] uppercase tracking-wider bg-white/5 px-3.5 py-1.5 rounded-full border border-white/10">
-                            / Confidential Emotional Support /
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                            Facing Relationship Struggles or Heavy Life Pressures?
-                        </h3>
-                        <p class="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed font-normal">
-                            You don't have to carry emotional trauma alone. TALKSWITHMRDEE partners with certified family therapists, relationship counselors, and legal advisors to provide discreet, judgment-free support.
-                        </p>
-                        <div class="pt-1 flex flex-wrap items-center gap-5 text-xs text-slate-400">
-                            <span class="flex items-center gap-1.5"><i class="bi bi-envelope-fill text-[#F3C63F]"></i> talkswithmrdee@gmail.com</span>
-                            <span class="flex items-center gap-1.5"><i class="bi bi-telephone-fill text-emerald-400"></i> +234 907 942 4733</span>
-                            <span class="flex items-center gap-1.5"><i class="bi bi-geo-alt-fill text-rose-400"></i> Ikeja, Lagos</span>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-                        <a href="{{ route('support.index') }}" class="inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] px-6 py-4 rounded-full shadow-lg transition-all duration-200 group text-center">
-                            <span>Get Confidential Support</span>
-                            <span class="w-6 h-6 rounded-full bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xs font-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </span>
-                        </a>
-
-                        <a href="{{ route('podcast.be-a-guest') }}" class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-[#F3C63F] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 transition text-center">
-                            <i class="bi bi-megaphone-fill text-[#F3C63F]"></i>
-                            <span>Pitch to Be on the Show</span>
-                        </a>
-                    </div>
-
-                </div>
+    <!-- ========================================================= -->
+    <!-- 4. FEATURED GUESTS SECTION (With Gold Hover Effect)       -->
+    <!-- ========================================================= -->
+    <section id="guests" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="text-center space-y-2 border-b border-slate-100 pb-6">
+                <span class="text-[#F3C63F] text-xs font-black tracking-widest uppercase">/ The Voices /</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-[#181A20]">Featured Guests</h2>
             </div>
 
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Guest Card (Gold Hover Border) -->
+                <div class="bg-white border-2 border-slate-100 hover:border-[#F3C63F] p-6 rounded-[24px] flex flex-col items-center text-center space-y-4 shadow-sm hover:shadow-lg transition-all duration-300">
+                    <img src="{{ asset('images/guest-speaker.jpg') }}" alt="Guest Speaker" class="w-24 h-24 rounded-full object-cover border-4 border-slate-50 shadow-md">
+                    <div>
+                        <h3 class="text-lg font-bold text-[#181A20]">Dr. Sarah Okon</h3>
+                        <p class="text-[11px] text-[#F3C63F] font-bold uppercase tracking-wider">Licensed Therapist</p>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3">
+                        Specializes in cognitive behavioral therapy and couples mediation with over 10 years of clinical experience in Lagos.
+                    </p>
+                    <div class="pt-4 border-t border-slate-100 w-full flex justify-between items-center text-[10px] text-slate-500">
+                        <span class="font-bold bg-slate-50 px-3 py-1 rounded-full">Featured in: Ep. 42</span>
+                        <a href="https://www.instagram.com/talks_with_mrdee?stkn=bGtlMGdkMWJjcGh6" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-[#F3C63F] transition-colors">
+                            <i class="bi bi-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 5. TELL US YOUR TYPE                                      -->
+    <!-- ========================================================= -->
+    <section id="matchmaking" class="py-16 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-[#181A20] p-8 sm:p-12 rounded-[36px] shadow-2xl relative overflow-hidden border border-slate-800">
+                <div class="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+                    <i class="bi bi-hearts text-9xl text-white"></i>
+                </div>
+                
+                <div class="relative z-10 space-y-8">
+                    <div class="space-y-2 border-b border-white/10 pb-6">
+                        <span class="text-[#F3C63F] text-xs font-black tracking-widest uppercase">Intentional Connections</span>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white">Tell Us Your Type</h2>
+                        <p class="text-sm text-slate-400 max-w-2xl leading-relaxed">
+                            Looking for a meaningful, intentional relationship? Submit your preferences confidentially. We review submissions to help foster connections between individuals with compatible values and relationship expectations.
+                        </p>
+                    </div>
+
+                    <form action="{{ route('podcast.matchmaking.store') }}" method="POST" class="space-y-6">
+                        @csrf
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-white uppercase tracking-wider">Your Full Name</label>
+                                <input type="text" name="name" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-white uppercase tracking-wider">Email Address</label>
+                                <input type="email" name="email" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-white uppercase tracking-wider">Your Age</label>
+                                <input type="number" name="age" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-white uppercase tracking-wider">Preferred Age Range</label>
+                                <input type="text" name="preferred_age" placeholder="e.g., 28 - 35" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-white uppercase tracking-wider">Describe Your Ideal Partner</label>
+                            <textarea name="preferences" rows="4" placeholder="Values, traits, goals, and expectations..." required class="w-full text-sm p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none"></textarea>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" name="consent" required id="consent" class="mt-1 w-4 h-4 rounded border-white/20 bg-white/5 text-[#F3C63F] focus:ring-[#F3C63F]">
+                            <label for="consent" class="text-xs text-slate-400 leading-relaxed">
+                                I consent to TalksWithMrDee securely storing this information for potential connection opportunities. I understand this is not a matchmaking guarantee and is handled with strict confidentiality.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl font-bold text-[#181A20] bg-[#F3C63F] hover:bg-white transition flex justify-center items-center gap-2">
+                            <span>Submit Preferences Privately</span> <i class="bi bi-lock-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 6. PARTICIPATE (Submit Story & Become Guest)              -->
+    <!-- ========================================================= -->
+    <section id="participate" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-black text-[#181A20]">Join the Conversation</h2>
+                <p class="text-sm text-slate-500">Share your journey, expertise, or real-life story.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Submit Your Story -->
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-[32px] space-y-6 shadow-sm">
+                    <div class="border-b border-slate-200 pb-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xl mb-4 shadow">
+                            <i class="bi bi-journal-text"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#181A20]">Submit Your Story</h3>
+                        <p class="text-xs text-slate-500 mt-1">Have a relationship dilemma or a profound life experience? Send it in.</p>
+                    </div>
+                    
+                    <form action="{{ route('podcast.story.store') }}" method="POST" class="space-y-4">
+                        @csrf
+                        <input type="text" name="name" placeholder="Name or Alias" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                        <input type="email" name="email" placeholder="Email Address" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                        <input type="text" name="topic" placeholder="Story Topic / Subject" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                        <textarea name="story" rows="4" placeholder="Type your story or question here..." required class="w-full text-sm p-4 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none"></textarea>
+                        
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="anonymous" id="anonymous" class="rounded border-slate-300 bg-white text-[#181A20]">
+                            <label for="anonymous" class="text-xs text-slate-600">Keep my identity anonymous on air</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="consent_story" required id="consent_story" class="rounded border-slate-300 bg-white text-[#181A20]">
+                            <label for="consent_story" class="text-[10px] text-slate-500">I consent to this story being discussed publicly.</label>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-white bg-[#181A20] hover:bg-black transition shadow">Submit Story</button>
+                    </form>
+                </div>
+
+                <!-- Become a Guest -->
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-[32px] space-y-6 shadow-sm">
+                    <div class="border-b border-slate-200 pb-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#181A20] text-[#F3C63F] flex items-center justify-center text-xl mb-4 shadow">
+                            <i class="bi bi-person-video3"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#181A20]">Apply to be a Guest</h3>
+                        <p class="text-xs text-slate-500 mt-1">Are you an expert, professional, or someone with an inspiring success story?</p>
+                    </div>
+                    
+                    <form action="{{ route('podcast.guest.store') }}" method="POST" class="space-y-4">
+                        @csrf
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" name="name" placeholder="Full Name" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                            <input type="text" name="profession" placeholder="Profession / Title" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="email" name="email" placeholder="Email Contact" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                            <input type="text" name="socials" placeholder="Social Media Handles" class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                        </div>
+                        <input type="text" name="expertise" placeholder="Area of Expertise / Topic" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none">
+                        <textarea name="bio" rows="4" placeholder="Brief biography and reason for wanting to appear..." required class="w-full text-sm p-4 rounded-xl bg-white border border-slate-200 text-slate-900 focus:border-[#F3C63F] focus:outline-none"></textarea>
+                        
+                        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-[#181A20] bg-[#F3C63F] hover:bg-[#eab92d] transition shadow">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 7. NEWSLETTER & CONTACT                                   -->
+    <!-- ========================================================= -->
+    <section id="contact" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <!-- Newsletter Ribbon -->
+            <div class="bg-[#F3C63F] rounded-[24px] p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+                <div class="space-y-1 text-center md:text-left max-w-md">
+                    <h3 class="text-xl sm:text-2xl font-black text-[#181A20]">Don't Miss an Episode</h3>
+                    <p class="text-xs text-[#181A20]/80 font-medium">Subscribe to our newsletter for podcast updates and guest announcements.</p>
+                </div>
+                <form action="{{ route('podcast.newsletter.store') }}" method="POST" class="w-full md:w-auto flex-1 max-w-sm flex gap-2">
+                    @csrf
+                    <input type="email" name="email" placeholder="Enter your email" required class="w-full text-sm px-4 py-3 rounded-xl bg-white border border-white/50 text-[#181A20] focus:outline-none">
+                    <button type="submit" class="px-6 py-3 rounded-xl font-bold text-white bg-[#181A20] hover:bg-black transition">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Contact The Podcast -->
+                <div class="bg-white border border-slate-200 p-8 rounded-[32px] space-y-6 shadow-sm">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#181A20]">Contact The Podcast</h3>
+                        <p class="text-xs text-slate-500 mt-1">For general inquiries, collaborations, or feedback.</p>
+                    </div>
+                    <form action="{{ route('podcast.contact.store') }}" method="POST" class="space-y-4">
+                        @csrf
+                        <input type="text" name="name" placeholder="Name" required class="w-full text-sm px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#F3C63F] focus:outline-none">
+                        <input type="email" name="email" placeholder="Email" required class="w-full text-sm px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#F3C63F] focus:outline-none">
+                        <textarea name="message" rows="3" placeholder="Your message..." required class="w-full text-sm p-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#F3C63F] focus:outline-none"></textarea>
+                        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Partner With Us -->
+                <div class="bg-white border border-slate-200 p-8 rounded-[32px] space-y-6 shadow-sm">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#181A20]">Partner With Us</h3>
+                        <p class="text-xs text-slate-500 mt-1">Inquire about episode sponsorship, brand partnerships, or media collaborations.</p>
+                    </div>
+                    <form action="{{ route('podcast.partner.store') }}" method="POST" class="space-y-4">
+                        @csrf
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" name="company" placeholder="Company/Brand" required class="w-full text-sm px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#F3C63F] focus:outline-none">
+                            <input type="email" name="email" placeholder="Corporate Email" required class="w-full text-sm px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#F3C63F] focus:outline-none">
+                        </div>
+                        <select name="type" required class="w-full text-sm px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#F3C63F] focus:outline-none text-slate-600">
+                            <option value="">Select Partnership Type</option>
+                            <option value="sponsorship">Episode Sponsorship</option>
+                            <option value="brand">Brand Partnership</option>
+                            <option value="corporate">Corporate Collaboration</option>
+                        </select>
+                        <textarea name="details" rows="2" placeholder="Brief details of your proposal..." required class="w-full text-sm p-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#F3C63F] focus:outline-none"></textarea>
+                        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-white bg-[#181A20] hover:bg-black transition">Submit Proposal</button>
+                    </form>
+                </div>
+            </div>
+            
         </div>
     </section>
 </x-podcast-layout>

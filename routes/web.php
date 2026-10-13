@@ -37,3 +37,16 @@ Route::post('/support/request', [InquiryController::class, 'storeSupport'])->nam
 Route::post('/podcast/guest', [InquiryController::class, 'storeGuest'])->name('podcast.guest.store');
 Route::post('/contact/send', [InquiryController::class, 'storeContact'])->name('contact.store');
 Route::post('/newsletter/subscribe', [InquiryController::class, 'storeNewsletter'])->name('newsletter.subscribe');
+
+// Podcast Page Routes
+Route::get('/talks-with-mr-dee', [PodcastController::class, 'index'])->name('podcast.index');
+
+// Podcast Form Submission Routes
+Route::prefix('podcast')->name('podcast.')->group(function () {
+    Route::post('/matchmaking', [PodcastController::class, 'storeMatchmaking'])->name('matchmaking.store');
+    Route::post('/story', [PodcastController::class, 'storeStory'])->name('story.store');
+    Route::post('/guest', [PodcastController::class, 'storeGuest'])->name('guest.store');
+    Route::post('/newsletter', [PodcastController::class, 'storeNewsletter'])->name('newsletter.store');
+    Route::post('/contact', [PodcastController::class, 'storeContact'])->name('contact.store');
+    Route::post('/partner', [PodcastController::class, 'storePartner'])->name('partner.store');
+});

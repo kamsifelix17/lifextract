@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PodcastController extends Controller
 {
     /**
-     * Display all podcast episodes with search
+     * Display the SINGLE podcast page with episodes and guests
      */
     public function index(Request $request)
     {
@@ -24,27 +24,49 @@ class PodcastController extends Controller
             });
         }
 
-        $episodes = $query->orderBy('air_date', 'desc')->paginate(9);
+        // Fetch episodes for the single-page grid
+        $episodes = $query->orderBy('air_date', 'desc')->paginate(8);
 
         return view('pages.podcast.index', compact('episodes'));
     }
 
-    /**
-     * Display a single episode with video player & show notes
-     */
-    public function show(string $slug)
-    {
-        $episode = Episode::where('slug', $slug)->where('is_published', true)->firstOrFail();
-        $relatedEpisodes = Episode::where('id', '!=', $episode->id)->where('is_published', true)->take(3)->get();
+    /* =========================================================
+       FORM SUBMISSION HANDLERS
+       ========================================================= */
 
-        return view('pages.podcast.show', compact('episode', 'relatedEpisodes'));
+    public function storeMatchmaking(Request $request)
+    {
+        // Validation & DB logic goes here
+        return back()->with('success', 'Your preferences have been confidentially submitted.');
     }
 
-    /**
-     * "Be A Guest / Share Your Story" Pitch Form
-     */
-    public function beAGuest()
+    public function storeStory(Request $request)
     {
-        return view('pages.podcast.be-a-guest');
+        // Validation & DB logic goes here
+        return back()->with('success', 'Your story has been submitted successfully.');
+    }
+
+    public function storeGuest(Request $request)
+    {
+        // Validation & DB logic goes here
+        return back()->with('success', 'Your guest application has been received.');
+    }
+
+    public function storeNewsletter(Request $request)
+    {
+        // Validation & DB logic goes here
+        return back()->with('success', 'Thank you for subscribing to TalksWithMrDee!');
+    }
+
+    public function storeContact(Request $request)
+    {
+        // Validation & DB logic goes here
+        return back()->with('success', 'Your message has been sent to our team.');
+    }
+
+    public function storePartner(Request $request)
+    {
+        // Validation & DB logic goes here
+        return back()->with('success', 'Your partnership proposal has been submitted for executive review.');
     }
 }
