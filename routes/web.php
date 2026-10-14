@@ -40,6 +40,7 @@ Route::post('/newsletter/subscribe', [InquiryController::class, 'storeNewsletter
 
 // Podcast Page Routes
 Route::get('/talks-with-mr-dee', [PodcastController::class, 'index'])->name('podcast.index');
+Route::get('/talks-with-mr-dee/tell-us-your-type', [PodcastController::class, 'matchmaking'])->name('podcast.matchmaking');
 
 // Podcast Form Submission Routes
 Route::prefix('podcast')->name('podcast.')->group(function () {

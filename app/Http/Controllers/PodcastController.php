@@ -33,11 +33,12 @@ class PodcastController extends Controller
     /* =========================================================
        FORM SUBMISSION HANDLERS
        ========================================================= */
-
-    public function storeMatchmaking(Request $request)
+    /**
+     * Display the dedicated Matchmaking / Tell Us Your Type page
+     */
+    public function matchmaking()
     {
-        // Validation & DB logic goes here
-        return back()->with('success', 'Your preferences have been confidentially submitted.');
+        return view('pages.podcast.matchmaking');
     }
 
     public function storeStory(Request $request)

@@ -200,7 +200,7 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 5. TELL US YOUR TYPE                                      -->
+    <!-- 5. TELL US YOUR TYPE (Call to Action Block)               -->
     <!-- ========================================================= -->
     <section id="matchmaking" class="py-16 bg-slate-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,52 +209,18 @@
                     <i class="bi bi-hearts text-9xl text-white"></i>
                 </div>
                 
-                <div class="relative z-10 space-y-8">
-                    <div class="space-y-2 border-b border-white/10 pb-6">
+                <div class="relative z-10 space-y-6">
+                    <div class="space-y-2">
                         <span class="text-[#F3C63F] text-xs font-black tracking-widest uppercase">Intentional Connections</span>
                         <h2 class="text-3xl sm:text-4xl font-black text-white">Tell Us Your Type</h2>
                         <p class="text-sm text-slate-400 max-w-2xl leading-relaxed">
-                            Looking for a meaningful, intentional relationship? Submit your preferences confidentially. We review submissions to help foster connections between individuals with compatible values and relationship expectations.
+                            Looking for a meaningful, intentional relationship? We review submissions confidentially to help foster connections between individuals with compatible values, goals, and relationship expectations.
                         </p>
                     </div>
-
-                    <form action="{{ route('podcast.matchmaking.store') }}" method="POST" class="space-y-6">
-                        @csrf
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="text-xs font-bold text-white uppercase tracking-wider">Your Full Name</label>
-                                <input type="text" name="name" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-xs font-bold text-white uppercase tracking-wider">Email Address</label>
-                                <input type="email" name="email" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-xs font-bold text-white uppercase tracking-wider">Your Age</label>
-                                <input type="number" name="age" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-xs font-bold text-white uppercase tracking-wider">Preferred Age Range</label>
-                                <input type="text" name="preferred_age" placeholder="e.g., 28 - 35" required class="w-full text-sm px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none">
-                            </div>
-                        </div>
-
-                        <div class="space-y-2">
-                            <label class="text-xs font-bold text-white uppercase tracking-wider">Describe Your Ideal Partner</label>
-                            <textarea name="preferences" rows="4" placeholder="Values, traits, goals, and expectations..." required class="w-full text-sm p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:border-[#F3C63F] focus:outline-none"></textarea>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <input type="checkbox" name="consent" required id="consent" class="mt-1 w-4 h-4 rounded border-white/20 bg-white/5 text-[#F3C63F] focus:ring-[#F3C63F]">
-                            <label for="consent" class="text-xs text-slate-400 leading-relaxed">
-                                I consent to TalksWithMrDee securely storing this information for potential connection opportunities. I understand this is not a matchmaking guarantee and is handled with strict confidentiality.
-                            </label>
-                        </div>
-
-                        <button type="submit" class="w-full py-4 rounded-xl font-bold text-[#181A20] bg-[#F3C63F] hover:bg-white transition flex justify-center items-center gap-2">
-                            <span>Submit Preferences Privately</span> <i class="bi bi-lock-fill"></i>
-                        </button>
-                    </form>
+                    
+                    <a href="{{ route('podcast.matchmaking') }}" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-[#181A20] bg-[#F3C63F] hover:bg-white transition shadow-lg">
+                        <span>Open Private Matchmaking Form</span> <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
