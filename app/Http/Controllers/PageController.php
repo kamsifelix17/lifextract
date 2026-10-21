@@ -65,4 +65,13 @@ class PageController extends Controller
         $programs = Program::all();
         return view('pages.donate', compact('programs'));
     }
+    public function privacy()
+    {
+        return view('pages.privacy');
+    }
+
+    public function terms()
+    {
+        return view('pages.terms');
+    }
 }

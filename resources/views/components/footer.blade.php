@@ -94,13 +94,29 @@
                 </ul>
             </div>
 
+            <!-- Column 4: Media & Updates (NEW SEPARATE SECTION) -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-black uppercase tracking-wider text-[#F3C63F]">Media & Updates</h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                    <li><a href="{{ route('news.index') }}" class="hover:text-white transition">News & Events Hub</a></li>
+                    <li><a href="{{ route('gallery.index') }}" class="hover:text-white transition">Media Gallery</a></li>
+                    <li class="pt-2">
+                        <a href="{{ url('/admin') }}" target="_blank" class="inline-flex items-center gap-1.5 text-[#F3C63F] font-bold hover:underline">
+                            <i class="bi bi-shield-lock-fill"></i> Admin Portal
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
-        <!-- Bottom Row: Huge Brand Name & Copyright (Exact Carenest Footer) -->
-        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
-            <div class="flex flex-col sm:flex-row items-center sm:items-baseline gap-2 sm:gap-4 text-center sm:text-left">
-                <span class="text-2xl sm:text-3xl font-black text-white tracking-tight">Lifextract</span>
-                <p>&copy; {{ date('Y') }} Lifextract Humanitarian Foundation. All rights reserved.</p>
+        <!-- Bottom Copyright & Legal Links -->
+        <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <p>&copy; {{ date('Y') }} Lifextract Humanitarian Foundation. All Rights Reserved.</p>
+            
+            <div class="flex items-center gap-6">
+                <a href="{{ route('privacy') }}" class="hover:text-slate-300 transition">Privacy Policy</a>
+                <a href="{{ route('terms') }}" class="hover:text-slate-300 transition">Terms of Use</a>
             </div>
             <div class="flex items-center gap-1.5 text-xs text-slate-400">
                 <span>Crafted with</span>

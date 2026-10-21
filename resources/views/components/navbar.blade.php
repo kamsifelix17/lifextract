@@ -21,7 +21,8 @@
             <a href="{{ route('podcast.index') }}" class="flex items-center gap-1.5 text-amber-600 hover:text-[#181A20] transition {{ request()->routeIs('podcast.*') ? 'text-[#181A20] font-bold' : '' }}">
                 <i class="bi bi-mic-fill"></i> TalksWithMrDee
             </a>
-        </nav>
+            <a href="{{ route('news.index') }}" class="hover:text-amber-600 transition">News & Events</a>
+            <a href="{{ route('gallery.index') }}" class="hover:text-amber-600 transition">Gallery</a>
 
         <!-- Right: Action Button & Mobile Toggle -->
         <div class="flex items-center gap-2 sm:gap-3">
@@ -68,6 +69,14 @@
             <span>Contact Us</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
 
+        <a href="{{ route('news.index') }}" class="hover:text-amber-600 transition">
+            <span>News & Events</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
+        </a>
+        
+        <a href="{{ route('gallery.index') }}" class="hover:text-amber-600 transition">
+            <span>Gallery</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
+        </a>
+    
         <div class="pt-3 border-t border-slate-100 px-1">
             <a href="{{ route('donate') }}" class="flex items-center justify-between py-3 px-5 rounded-2xl bg-[#F3C63F] text-[#181A20] font-black text-xs uppercase tracking-wider shadow">
                 <span>Donate to a Program</span><i class="bi bi-arrow-up-right"></i>

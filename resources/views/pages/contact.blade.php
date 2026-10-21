@@ -1,5 +1,7 @@
 <x-layout>
-    <x-slot:title>Contact Us — Lifextract Humanitarian Foundation</x-slot:title>
+    <x-slot:title>
+        Contact Us — Lifextract Humanitarian Foundation
+    </x-slot:title>
 
     <!-- ========================================================= -->
     <!-- 1. HERO SECTION (Carenest Dark Rounded Card)              -->
@@ -200,4 +202,5 @@
             </div>
         </div>
     </section>
+    
 </x-layout>
