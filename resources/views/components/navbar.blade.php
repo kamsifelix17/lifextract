@@ -21,8 +21,11 @@
             <a href="{{ route('podcast.index') }}" class="flex items-center gap-1.5 text-amber-600 hover:text-[#181A20] transition {{ request()->routeIs('podcast.*') ? 'text-[#181A20] font-bold' : '' }}">
                 <i class="bi bi-mic-fill"></i> TalksWithMrDee
             </a>
-            <a href="{{ route('news.index') }}" class="hover:text-amber-600 transition">News & Events</a>
-            <a href="{{ route('gallery.index') }}" class="hover:text-amber-600 transition">Gallery</a>
+            
+            <!-- Added Route Logic for Active Focus -->
+            <a href="{{ route('news.index') }}" class="hover:text-amber-600 transition {{ request()->routeIs('news.*', 'events.*') ? 'text-[#181A20] font-bold' : '' }}">News & Events</a>
+            <a href="{{ route('gallery.index') }}" class="hover:text-amber-600 transition {{ request()->routeIs('gallery.*') ? 'text-[#181A20] font-bold' : '' }}">Gallery</a>
+        </nav> <!-- THIS CLOSING TAG WAS MISSING -->
 
         <!-- Right: Action Button & Mobile Toggle -->
         <div class="flex items-center gap-2 sm:gap-3">
@@ -69,11 +72,12 @@
             <span>Contact Us</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
 
-        <a href="{{ route('news.index') }}" class="hover:text-amber-600 transition">
+        <!-- Added Route Logic for Active Focus on Mobile -->
+        <a href="{{ route('news.index') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('news.*', 'events.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
             <span>News & Events</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
         
-        <a href="{{ route('gallery.index') }}" class="hover:text-amber-600 transition">
+        <a href="{{ route('gallery.index') }}" class="flex items-center justify-between px-4 py-2.5 rounded-2xl text-sm font-semibold {{ request()->routeIs('gallery.*') ? 'bg-[#181A20] text-[#F3C63F]' : 'text-slate-700 hover:bg-slate-50' }}">
             <span>Gallery</span><i class="bi bi-chevron-right text-xs opacity-50"></i>
         </a>
     
