@@ -11,6 +11,7 @@ FROM php:8.2-apache
 RUN apt-get update && apt-get install -y \
     git \
     curl \
+    libicu-dev \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
@@ -19,7 +20,8 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libsqlite3-dev \
     libpq-dev \
-    && docker-php-ext-install pdo pdo_mysql pdo_sqlite pdo_pgsql mbstring exif pcntl bcmath gd zip \
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install pdo pdo_mysql pdo_sqlite pdo_pgsql mbstring exif pcntl bcmath gd zip intl \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
