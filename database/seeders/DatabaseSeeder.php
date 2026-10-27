@@ -21,6 +21,14 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        User::updateOrCreate(
+            ['email' => 'admin@admin.com'],
+            [
+                'name' => 'Lifextract Admin',
+                'password' => bcrypt('password123'),
+            ]
+        );
+
         // 2. Call Our Custom Content Seeder (Programs, Episodes, Impact Stories)
         $this->call(PlatformContentSeeder::class);
     }
